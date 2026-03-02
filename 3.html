@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta content="https://hills.ccsf.edu/~ragui124/theAllegoryOfTheBicameralMind.jpg" property="og:image">
+    <link rel="icon" type="image/jpg" href="https://hills.ccsf.edu/~ragui124/theAllegoryOfTheBicameralMind.jpg">
+    <link rel="stylesheet" href="styles.css">
+    <title>Schwitzgebel · sparseness/abundance · snail consciousness</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: #f0ede5;
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.6;
+            color: #2d3a3a;
+            padding: 2rem 1rem;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            max-width: 1000px;
+            width: 100%;
+            margin: 2rem auto;
+            background: #fffaf2;
+            border-radius: 48px;
+            box-shadow: 0 25px 45px rgba(40, 30, 10, 0.15);
+            padding: 3rem 2.5rem;
+            border: 1px solid #dacbb8;
+        }
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 400;
+            letter-spacing: -0.5px;
+            color: #2b5e5e;
+            border-left: 12px solid #9bb8a8;
+            padding-left: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+        .sub {
+            font-size: 1.2rem;
+            color: #5f6f7d;
+            margin-bottom: 2rem;
+            font-style: italic;
+            padding-left: 3rem;
+        }
+        .paper-ref {
+            background: #e9e2d9;
+            border-radius: 60px;
+            padding: 0.3rem 1.5rem;
+            font-size: 0.9rem;
+            display: inline-block;
+            margin-bottom: 1.5rem;
+            border: 1px solid #bda78b;
+        }
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 400;
+            color: #1f5a4c;
+            margin: 2rem 0 1rem;
+            border-bottom: 2px dotted #b2956e;
+            padding-bottom: 0.3rem;
+        }
+        .dimension-block {
+            background: #f3efe9;
+            border-radius: 32px;
+            padding: 1.8rem;
+            margin: 1.5rem 0;
+            border: 1px solid #cfbcac;
+        }
+        .dim-pair {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 1rem 0;
+        }
+        .dim-card {
+            flex: 1 1 250px;
+            background: #fffaf2;
+            border-radius: 28px;
+            padding: 1.8rem 1.5rem;
+            border: 1px solid #c5b4a2;
+            box-shadow: 0 6px 0 #b3a084;
+        }
+        .dim-card h3 {
+            font-size: 1.8rem;
+            font-weight: 350;
+            color: #2b5e5e;
+            margin-bottom: 0.3rem;
+        }
+        .dim-card .subhead {
+            font-size: 1.1rem;
+            font-style: italic;
+            color: #5b6e62;
+            margin-bottom: 1rem;
+            border-bottom: 1px dashed #bda78b;
+            padding-bottom: 0.3rem;
+        }
+        .lessons-list {
+            list-style: none;
+            margin: 1.8rem 0;
+        }
+        .lessons-list li {
+            font-size: 1.15rem;
+            margin-bottom: 1.2rem;
+            padding-left: 2.2rem;
+            position: relative;
+        }
+        .lessons-list li::before {
+            content: "🐌";
+            position: absolute;
+            left: 0;
+            color: #6b4f3a;
+            font-size: 1.3rem;
+        }
+        .quote-block {
+            background: #f0ede5;
+            border-radius: 28px;
+            padding: 1.5rem 2rem;
+            margin: 2rem 0;
+            font-style: italic;
+            border-left: 8px solid #9bb8a8;
+            color: #2d5a4f;
+        }
+        .cite {
+            font-size: 0.9rem;
+            color: #5f6f7d;
+            margin-top: 0.5rem;
+            text-align: right;
+        }
+        .gong-box {
+            background: #e6dcd0;
+            border-radius: 28px;
+            padding: 1.2rem 1.8rem;
+            margin: 1.5rem 0;
+            border: 2px solid #baa385;
+            text-align: center;
+            font-size: 1.3rem;
+        }
+        .nav-back {
+            margin-top: 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 2px solid #cfc3b4;
+            padding-top: 2rem;
+        }
+        .back-link {
+            background: #f0ede5;
+            padding: 0.8rem 2rem;
+            border-radius: 60px;
+            text-decoration: none;
+            color: #2d3a3a;
+            font-weight: 600;
+            border: 1px solid #b59d79;
+            transition: 0.15s;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+        .back-link:hover {
+            background: #e4dacd;
+            border-color: #8d6e4c;
+            color: #1a3636;
+            transform: scale(1.02);
+        }
+        .footer-note {
+            text-align: center;
+            margin-top: 2rem;
+            color: #5f6f6a;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- header -->
+        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.2rem;">
+            <span style="font-size: 2.5rem;">📚</span>
+            <span class="paper-ref">Schwitzgebel · "Is There Something It’s Like to Be a Garden Snail?" (2020)</span>
+        </div>
+        <h1>Dimensions of sparseness or abundance of consciousness</h1>
+        <div class="sub">and lessons for thinking about consciousness in a snail</div>
+
+        <!-- dimensions section -->
+        <div class="section-title">🌌 1. The two poles: abundant vs. sparse</div>
+        <p style="font-size:1.2rem; margin-bottom:0.5rem;">Schwitzgebel frames the question of snail consciousness within a deeper cosmological puzzle: <strong>how widespread is consciousness in the universe?</strong> He introduces two opposing theoretical possibilities [<a href="#ref1" style="color:#2b5e5e;">1</a>]:</p>
+
+        <div class="dim-pair">
+            <div class="dim-card">
+                <h3>🌊 abundant</h3>
+                <div class="subhead">consciousness is "cheap"</div>
+                <p>Consciousness might be <strong>pervasive</strong> — instantiated almost everywhere there’s a bit of interesting complexity. It could be easy to build, requiring only relatively simple organization [<a href="#ref2" style="color:#2b5e5e;">2</a>].</p>
+                <p style="margin-top:0.8rem;"><em>Snail implication:</em> Almost certainly conscious — 60,000 central neurons + complex behavior would be more than enough for simple tactile, olfactory, or gustatory experience.</p>
+            </div>
+            <div class="dim-card">
+                <h3>🏜️ sparse</h3>
+                <div class="subhead">consciousness is "expensive"</div>
+                <p>Consciousness might be <strong>rare</strong> — demanding high levels of cognitive sophistication, specific biological conditions, or capacities for self-representation that may exist only in a few species [<a href="#ref2" style="color:#2b5e5e;">2</a>].</p>
+                <p style="margin-top:0.8rem;"><em>Snail implication:</em> Almost certainly not conscious — a snail would be an "intricate, fascinating machine" [<a href="#ref1" style="color:#2b5e5e;">1</a>] with no inner experience, like a rock or toy robot.</p>
+            </div>
+        </div>
+
+        <p style="font-size:1.1rem; background:#f9f3ec; padding:1rem 1.8rem; border-radius:60px;">⚖️ Schwitzgebel emphasizes that the truth might lie somewhere in the middle, but it is a <strong>"vast middle"</strong> — and the garden snail sits near the center of that middle, making it a perfect diagnostic case [<a href="#ref2" style="color:#2b5e5e;">2</a>].</p>
+
+        <!-- three possible answers -->
+        <div class="section-title">🔔 2. The three possible answers: yes, no, *gong*</div>
+        <p>Schwitzgebel argues that the question "are garden snails conscious?" admits of <strong>three</strong> distinct, antecedently plausible answers [<a href="#ref1" style="color:#2b5e5e;">1</a>][<a href="#ref3" style="color:#2b5e5e;">3</a>]:</p>
+
+        <div style="display:flex; flex-wrap:wrap; gap:1rem; margin:1.5rem 0; justify-content:center;">
+            <div style="background:#fff0e0; border-radius:28px; padding:1rem 2rem; flex:1 1 150px; text-align:center; border:2px solid #9bb8a8;">
+                <span style="font-size:2rem;">✅</span><br><strong style="font-size:1.4rem;">yes</strong><br><span style="font-size:0.95rem;">simple tactile/olfactory experience</span>
+            </div>
+            <div style="background:#f0e6dd; border-radius:28px; padding:1rem 2rem; flex:1 1 150px; text-align:center; border:2px solid #b59d79;">
+                <span style="font-size:2rem;">❌</span><br><strong style="font-size:1.4rem;">no</strong><br><span style="font-size:0.95rem;">experientially empty, machine-like</span>
+            </div>
+            <div style="background:#e6dcd0; border-radius:28px; padding:1rem 2rem; flex:1 1 150px; text-align:center; border:2px solid #baa385;">
+                <span style="font-size:2rem;">🔔</span><br><strong style="font-size:1.4rem;"><em>gong</em></strong><br><span style="font-size:0.95rem;">reject the question / indeterminate</span>
+            </div>
+        </div>
+
+        <div class="gong-box">
+            <strong>The *gong* option</strong> — Schwitzgebel borrows from <em>The Gong Show</em>: not all questions deserve a yes-or-no answer. Perhaps the concept of "consciousness" is broken, or the snail sits in an indeterminate middle space, or the question has erroneous presuppositions [<a href="#ref1" style="color:#2b5e5e;">1</a>].
+        </div>
+
+        <!-- lessons section -->
+        <div class="section-title">🧠 3. Lessons for thinking about consciousness in a snail</div>
+
+        <div class="quote-block">
+            "Contemplate the garden snail with sufficient care and you will discover, I think, that we human beings, in our current scientific condition, have little ground for making confident assertions about one of the most general and foundational questions of the science of consciousness: How widespread is consciousness in the universe?" [<a href="#ref1" style="color:#2b5e5e;">1</a>]
+        </div>
+
+        <ul class="lessons-list">
+            <li><strong>The vicious circle (epistemic dead end):</strong> To know how widespread consciousness is, we need a well-justified general theory. But to build that theory, we need background assumptions about how widespread consciousness already is. Before X we need Y; before Y we need X. The snail exposes this loop [<a href="#ref1" style="color:#2b5e5e;">1</a>][<a href="#ref2" style="color:#2b5e5e;">2</a>].</li>
+            
+            <li><strong>Extrapolation from a single species:</strong> All theories of consciousness rely essentially on introspection and verbal reports — and these come from <em>only one species</em>: humans. Applying them to a gastropod with 60,000 neurons, a radically different nervous system (non-bipolar neurons, different neuropeptides), and no verbal behavior requires a massive, unverifiable leap [<a href="#ref1" style="color:#2b5e5e;">1</a>][<a href="#ref3" style="color:#2b5e5e;">3</a>].</li>
+            
+            <li><strong>The snail's brain is a strange middle case:</strong> Garden snails have ~60,000 central neurons (more than C. elegans's 302, fewer than an ant's 250,000). They have complex learning (associative, second-order conditioning), chemoreception, touch, gravity sensing, possibly sleep — but also radically different neural architecture (ganglia, no clear axon/dendrite differentiation). This mix of complexity and difference makes confident judgment impossible [<a href="#ref1" style="color:#2b5e5e;">1</a>][<a href="#ref3" style="color:#2b5e5e;">3</a>].</li>
+            
+            <li><strong>The "thread that unravels the sweater":</strong> The garden snail is a diagnostic case. Pulling on this question reveals that our assumptions about sparseness/abundance are just that — assumptions. It shows that we are in a "horrible epistemic position" regarding one of the most foundational questions in philosophy and cosmology [<a href="#ref2" style="color:#2b5e5e;">2</a>].</li>
+            
+            <li><strong>Antecedent plausibility becomes posterior plausibility:</strong> Yes, no, and <em>gong</em> all have antecedent plausibility (before applying theories). After applying theories, they retain plausibility — because theories are inevitably question-begging when applied to such different creatures. No theory can break the circle [<a href="#ref1" style="color:#2b5e5e;">1</a>].</li>
+        </ul>
+
+        <!-- specific reference to snail biology from the paper -->
+        <div style="background:#f3efe9; border-radius:28px; padding:1.5rem; margin:2rem 0;">
+            <h3 style="color:#2b5e5e; font-weight:400;">🐌 What Schwitzgebel says about snail neurobiology</h3>
+            <p style="margin-top:0.8rem;">"The central nervous system of the garden snail contains about 60,000 neurons... Gastropod neurons generally resemble vertebrate neurons, with a few notable differences: they usually don’t have a bipolar structure with axons on one side and dendrites on the other; input and output typically occur on both sides. Their small-molecule transmitters are the same as in vertebrates (acetylcholine, serotonin), but their larger-molecule neuropeptides are mostly different." [<a href="#ref1" style="color:#2b5e5e;">1</a>]</p>
+            <p style="margin-top:0.8rem;">Despite the small central count, snails have ~250,000 peripheral neurons, mostly in tentacles. They show associative learning, second-order conditioning, and unified behavioral responses. Yet none of this settles the consciousness question.</p>
+        </div>
+
+        <!-- conclusion -->
+        <div class="section-title">🎯 4. Conclusion: humility is required</div>
+        <p style="font-size:1.2rem;">Schwitzgebel's central lesson: we must acknowledge our ignorance. The question of snail consciousness remains genuinely open. The dimensions of sparseness/abundance are live philosophical options, and no current theory can decisively rule out any of the three answers (yes, no, <em>gong</em>). The snail is not a minor puzzle — it reveals the limits of our knowledge about the distribution of consciousness in the universe.</p>
+
+        <!-- references / citations -->
+        <div style="margin: 2.5rem 0 1rem; border-top: 2px solid #cfc3b4; padding-top: 1.5rem;">
+            <h4 style="font-size:1.2rem; color:#2b5e5e;">References (Schwitzgebel's paper)</h4>
+            <p id="ref1" style="font-size:0.95rem; margin-top:0.8rem;">[1] Schwitzgebel, E. (2020). "Is There Something It’s Like to Be a Garden Snail?" December 23, 2020 version. Department of Philosophy, UC Riverside. (11,300 words) <a href="#" style="color:#2b5e5e;">https://www.faculty.ucr.edu/~eschwitz/SchwitzPapers/Snails-201223.htm</a></p>
+            <p id="ref2" style="font-size:0.95rem;">[2] Schwitzgebel, E. (2019). "Is There Something It’s Like to Be a Garden Snail?" October 10, 2019 version. <a href="#" style="color:#2b5e5e;">https://www.faculty.ucr.edu/~eschwitz/SchwitzPapers/Snails-191010.htm</a></p>
+            <p id="ref3" style="font-size:0.95rem;">[3] Schwitzgebel, E. (2018). "Is There Something It’s Like to Be a Garden Snail?" October 23, 2018 version. <a href="#" style="color:#2b5e5e;">https://www.faculty.ucr.edu/~eschwitz/SchwitzPapers/Snails-181025.htm</a></p>
+        </div>
+
+        <!-- navigation back -->
+        <div class="nav-back">
+            <a href="index.html" class="back-link">
+                <span style="font-size:1.5rem;">←</span> back to all nine questions
+            </a>
+            <span style="font-size:0.95rem; color:#5c6f6b;">Schwitzgebel · sparseness/abundance · snail</span>
+        </div>
+
+        <div class="footer-note">
+            <p>📖 direct answers with citations from Schwitzgebel's 2018–2020 manuscript versions · midterm spring 2026</p>
+        </div>
+    </div>
+</body>
+</html>

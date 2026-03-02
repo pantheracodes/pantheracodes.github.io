@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta content="https://hills.ccsf.edu/~ragui124/theAllegoryOfTheBicameralMind.jpg" property="og:image">
+    <link rel="icon" type="image/jpg" href="https://hills.ccsf.edu/~ragui124/theAllegoryOfTheBicameralMind.jpg">
+    <link rel="stylesheet" href="styles.css">
+    <title>Birch et al. · 5 dimensions of animal consciousness</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: #f0ede5;
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.6;
+            color: #2d3a3a;
+            padding: 2rem 1rem;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            max-width: 1000px;
+            width: 100%;
+            margin: 2rem auto;
+            background: #fffaf2;
+            border-radius: 48px;
+            box-shadow: 0 25px 45px rgba(40, 30, 10, 0.15);
+            padding: 3rem 2.5rem;
+            border: 1px solid #dacbb8;
+        }
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 400;
+            letter-spacing: -0.5px;
+            color: #2b5e5e;
+            border-left: 12px solid #9bb8a8;
+            padding-left: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+        .sub {
+            font-size: 1.2rem;
+            color: #5f6f7d;
+            margin-bottom: 2rem;
+            font-style: italic;
+            padding-left: 3rem;
+        }
+        .paper-ref {
+            background: #e9e2d9;
+            border-radius: 60px;
+            padding: 0.3rem 1.5rem;
+            font-size: 0.9rem;
+            display: inline-block;
+            margin-bottom: 1.5rem;
+            border: 1px solid #bda78b;
+        }
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 400;
+            color: #1f5a4c;
+            margin: 2rem 0 1rem;
+            border-bottom: 2px dotted #b2956e;
+            padding-bottom: 0.3rem;
+        }
+        .dimension-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        .dim-card {
+            background: #f3efe9;
+            border-radius: 32px;
+            padding: 1.8rem;
+            border-left: 12px solid;
+            box-shadow: 0 5px 12px rgba(0,0,0,0.03);
+        }
+        .dim-card:nth-child(1) { border-left-color: #6a8e8e; }
+        .dim-card:nth-child(2) { border-left-color: #b58b7a; }
+        .dim-card:nth-child(3) { border-left-color: #a7b892; }
+        .dim-card:nth-child(4) { border-left-color: #b59d79; }
+        .dim-card:nth-child(5) { border-left-color: #7f9c8a; }
+        
+        .dim-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+        .dim-header h3 {
+            font-size: 1.8rem;
+            font-weight: 400;
+            color: #2d5a4f;
+        }
+        .dim-header span {
+            font-size: 2.2rem;
+        }
+        .dim-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+        .dim-definition {
+            flex: 2;
+            font-size: 1.15rem;
+        }
+        .dim-evidence {
+            flex: 1;
+            background: #fffaf2;
+            border-radius: 24px;
+            padding: 1.2rem;
+            border: 1px solid #cfbcac;
+        }
+        .dim-evidence h4 {
+            font-size: 1.2rem;
+            color: #4b6b5c;
+            margin-bottom: 0.8rem;
+            border-bottom: 1px dotted #b2956e;
+        }
+        .quote-block {
+            background: #f0ede5;
+            border-radius: 28px;
+            padding: 1.5rem 2rem;
+            margin: 2rem 0;
+            font-style: italic;
+            border-left: 8px solid #9bb8a8;
+            color: #2d5a4f;
+        }
+        .profiles-note {
+            background: #e6dcd0;
+            border-radius: 28px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border: 2px solid #baa385;
+            text-align: center;
+        }
+        .insight-list {
+            list-style: none;
+            margin: 1.5rem 0;
+        }
+        .insight-list li {
+            font-size: 1.15rem;
+            margin-bottom: 1rem;
+            padding-left: 2.2rem;
+            position: relative;
+        }
+        .insight-list li::before {
+            content: "🧠";
+            position: absolute;
+            left: 0;
+            color: #6b4f3a;
+            font-size: 1.3rem;
+        }
+        .nav-back {
+            margin-top: 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 2px solid #cfc3b4;
+            padding-top: 2rem;
+        }
+        .back-link {
+            background: #f0ede5;
+            padding: 0.8rem 2rem;
+            border-radius: 60px;
+            text-decoration: none;
+            color: #2d3a3a;
+            font-weight: 600;
+            border: 1px solid #b59d79;
+            transition: 0.15s;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+        .back-link:hover {
+            background: #e4dacd;
+            border-color: #8d6e4c;
+            color: #1a3636;
+            transform: scale(1.02);
+        }
+        .footer-note {
+            text-align: center;
+            margin-top: 2rem;
+            color: #5f6f6a;
+            font-size: 0.9rem;
+        }
+        .ref {
+            font-size: 0.9rem;
+            color: #5f6f7d;
+            margin-top: 0.3rem;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- header -->
+        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.2rem;">
+            <span style="font-size: 2.5rem;">📊</span>
+            <span class="paper-ref">Birch, Schnell & Clayton · Trends in Cognitive Sciences (2020)</span>
+        </div>
+        <h1>Dimensions of Animal Consciousness</h1>
+        <div class="sub">How Birch et al. analyze consciousness · the 5 dimensions</div>
+
+        <!-- introduction -->
+        <p style="font-size:1.2rem; margin-bottom:1.5rem;">Birch, Schnell, and Clayton (2020) propose a <strong>multidimensional framework</strong> for understanding how consciousness varies across species. Rather than ranking animals on a single scale from "less" to "more" conscious, they argue that each species has a distinctive <strong>consciousness profile</strong> across five key dimensions [<a href="#ref1" style="color:#2b5e5e;">1</a>][<a href="#ref2" style="color:#2b5e5e;">2</a>].</p>
+
+        <div class="quote-block">
+            "By assessing a given species against each dimension, we can construct a consciousness profile for that species. On this framework, there is no single scale along which species can be ranked as more or less conscious. Rather, each species has its own distinctive consciousness profile." [<a href="#ref1" style="color:#2b5e5e;">1</a>]
+        </div>
+
+        <!-- THE 5 DIMENSIONS -->
+        <div class="section-title">🔬 The five dimensions of animal consciousness</div>
+
+        <div class="dimension-grid">
+            <!-- Dimension 1: Perceptual richness -->
+            <div class="dim-card">
+                <div class="dim-header">
+                    <span>👁️</span>
+                    <h3>1. Perceptual richness (p-richness)</h3>
+                </div>
+                <div class="dim-content">
+                    <div class="dim-definition">
+                        <p><strong>What it measures:</strong> The degree of detail and complexity in an animal's sensory experience of the world. How finely discriminated are its perceptions across different modalities (vision, hearing, touch, etc.)? [<a href="#ref1" style="color:#2b5e5e;">1</a>]</p>
+                        <p style="margin-top:0.8rem;">This dimension is modality-specific – an animal might have high visual richness but low olfactory richness. The question is not <em>whether</em> the animal perceives, but how <em>rich and detailed</em> its conscious perceptions are.</p>
+                    </div>
+                    <div class="dim-evidence">
+                        <h4>📋 empirical approaches</h4>
+                        <p>Flicker fusion tests (temporal resolution), visual acuity tests, discrimination tasks, neurophysiological correlates of conscious perception (e.g., Nieder et al. 2020 on crows showing two-stage neural processing similar to primates) [<a href="#ref4" style="color:#2b5e5e;">4</a>].</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dimension 2: Evaluative richness -->
+            <div class="dim-card">
+                <div class="dim-header">
+                    <span>❤️</span>
+                    <h3>2. Evaluative richness (e-richness)</h3>
+                </div>
+                <div class="dim-content">
+                    <div class="dim-definition">
+                        <p><strong>What it measures:</strong> The richness of affective experience – pleasure, pain, emotions, moods, and valence. Does the animal have a rich inner world of feelings, or are its evaluations simple and binary? [<a href="#ref1" style="color:#2b5e5e;">1</a>][<a href="#ref6" style="color:#2b5e5e;">6</a>]</p>
+                        <p style="margin-top:0.8rem;">Birch et al. note that "valence must be present whenever there is affect-based decision making" – when choices are learned and used in future decisions, not merely reflexive [<a href="#ref6" style="color:#2b5e5e;">6</a>].</p>
+                    </div>
+                    <div class="dim-evidence">
+                        <h4>📋 empirical approaches</h4>
+                        <p>Preference tests, approach/avoidance, pain responses, consolation behavior after conflict (crows), play, mood-congruent judgment (optimism/pessimism tests), and neurochemical correlates [<a href="#ref4" style="color:#2b5e5e;">4</a>][<a href="#ref9" style="color:#2b5e5e;">9</a>].</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dimension 3: Integration at a time (synchronic unity) -->
+            <div class="dim-card">
+                <div class="dim-header">
+                    <span>🔄</span>
+                    <h3>3. Integration at a time (synchronic unity)</h3>
+                </div>
+                <div class="dim-content">
+                    <div class="dim-definition">
+                        <p><strong>What it measures:</strong> The degree to which diverse perceptual and evaluative experiences are bound together into a unified conscious moment. Is experience a coherent whole, or is it fragmented across different channels? [<a href="#ref1" style="color:#2b5e5e;">1</a>][<a href="#ref4" style="color:#2b5e5e;">4</a>]</p>
+                        <p style="margin-top:0.8rem;">Also called "synchronic unity" – the binding of simultaneous experiences. In humans, we experience a unified field of consciousness; in other animals, integration might be weaker or stronger.</p>
+                    </div>
+                    <div class="dim-evidence">
+                        <h4>📋 empirical approaches</h4>
+                        <p>Cross-modal integration tasks (e.g., matching visual and tactile information), interhemispheric communication studies, attentional blink, and neural connectivity measures. Birds show some hemispheric specialization but also integration [<a href="#ref4" style="color:#2b5e5e;">4</a>].</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dimension 4: Integration across time (diachronic unity) -->
+            <div class="dim-card">
+                <div class="dim-header">
+                    <span>⏳</span>
+                    <h3>4. Integration across time (diachronic unity)</h3>
+                </div>
+                <div class="dim-content">
+                    <div class="dim-definition">
+                        <p><strong>What it measures:</strong> The capacity to bind experiences across time into a coherent stream – episodic memory, anticipation, mental time travel. Does the animal experience its life as a continuous narrative, or as disconnected moments? [<a href="#ref1" style="color:#2b5e5e;">1</a>][<a href="#ref4" style="color:#2b5e5e;">4</a>]</p>
+                        <p style="margin-top:0.8rem;">This is William James's "stream of consciousness" – the sense that one's experiences belong to a single continuing self through time.</p>
+                    </div>
+                    <div class="dim-evidence">
+                        <h4>📋 empirical approaches</h4>
+                        <p>Episodic memory tests (what-where-when), future planning (e.g., scrub jays caching food for future needs), delayed gratification, and tool manufacture for future use [<a href="#ref4" style="color:#2b5e5e;">4</a>][<a href="#ref9" style="color:#2b5e5e;">9</a>].</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dimension 5: Self-consciousness -->
+            <div class="dim-card">
+                <div class="dim-header">
+                    <span>🪞</span>
+                    <h3>5. Self-consciousness</h3>
+                </div>
+                <div class="dim-content">
+                    <div class="dim-definition">
+                        <p><strong>What it measures:</strong> The extent to which an animal is aware of itself as a distinct individual, with its own mental states, and can attribute mental states to others (theory of mind). [<a href="#ref1" style="color:#2b5e5e;">1</a>][<a href="#ref4" style="color:#2b5e5e;">4</a>]</p>
+                        <p style="margin-top:0.8rem;">This includes bodily self-awareness, mirror self-recognition, and social cognition – understanding that others have perspectives and knowledge different from one's own.</p>
+                    </div>
+                    <div class="dim-evidence">
+                        <h4>📋 empirical approaches</h4>
+                        <p>Mirror self-recognition (magpies pass), theory of mind tasks (e.g., scrub jays re-hide food only if observed – they consider what others know), and consolation behavior [<a href="#ref4" style="color:#2b5e5e;">4</a>][<a href="#ref9" style="color:#2b5e5e;">9</a>].</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- How the framework understands animal consciousness -->
+        <div class="section-title">🧩 How the theory understands consciousness</div>
+
+        <div class="profiles-note">
+            <p style="font-size:1.3rem; margin-bottom:0.5rem;"><strong>Consciousness profiles, not rankings</strong></p>
+            <p style="font-size:1.1rem;">Birch et al. reject the idea of a single scale from "less conscious" to "more conscious." Instead, each species has a <strong>multidimensional profile</strong>. A species might be high on perceptual richness but low on self-consciousness, or high on evaluative richness but low on diachronic unity. There is no single answer to "which is more conscious?" – only comparisons dimension by dimension [<a href="#ref1" style="color:#2b5e5e;">1</a>][<a href="#ref3" style="color:#2b5e5e;">3</a>].</p>
+        </div>
+
+        <ul class="insight-list">
+            <li><strong>Species vary qualitatively, not just quantitatively:</strong> Different evolutionary pressures shape different kinds of consciousness. Octopuses likely have a very different profile from corvids, which differ from mammals [<a href="#ref6" style="color:#2b5e5e;">6</a>].</li>
+            <li><strong>Empirically tractable:</strong> Each dimension suggests concrete experiments (e.g., flicker fusion for perceptual richness, caching behavior for diachronic unity). The framework is designed to guide research [<a href="#ref1" style="color:#2b5e5e;">1</a>].</li>
+            <li><strong>No assumption of unity:</strong> The five dimensions are conceptually distinct and may vary independently. An animal might have rich perception but minimal self-awareness, or strong temporal integration but simple evaluation [<a href="#ref3" style="color:#2b5e5e;">3</a>].</li>
+            <li><strong>Welfare implications:</strong> Understanding a species' profile helps tailor ethical treatment – e.g., if an animal is high on evaluative richness (affect), welfare concerns are especially pressing [<a href="#ref4" style="color:#2b5e5e;">4</a>][<a href="#ref10" style="color:#2b5e5e;">10</a>].</li>
+        </ul>
+
+        <!-- Example application: corvids -->
+        <div style="background:#f3efe9; border-radius:28px; padding:1.5rem; margin:2rem 0;">
+            <h3 style="color:#2b5e5e; font-weight:400; display:flex; align-items:center; gap:0.5rem;">🐦‍⬛ Example: corvid consciousness profile (Veit et al. 2025)</h3>
+            <p style="margin-top:0.8rem;">A recent study applied Birch's framework to corvids (crows, jays, ravens) [<a href="#ref4" style="color:#2b5e5e;">4</a>][<a href="#ref9" style="color:#2b5e5e;">9</a>]:</p>
+            <ul style="margin-top:1rem; list-style-type:disc; padding-left:2rem;">
+                <li><strong>Perceptual richness:</strong> High – flicker fusion >100 Hz (humans ~60 Hz), two-stage neural processing similar to primates.</li>
+                <li><strong>Evaluative richness:</strong> High – play, consolation after conflict, mood-congruent judgment, neophobia.</li>
+                <li><strong>Synchronic unity:</strong> Moderate – hemispheric specialization but integration via pallial connectivity.</li>
+                <li><strong>Diachronic unity:</strong> High – episodic memory, future planning, tool manufacture for future use.</li>
+                <li><strong>Self-consciousness:</strong> Moderate to high – magpies pass mirror test; scrub jays show theory of mind (re-caching when observed).</li>
+            </ul>
+        </div>
+
+        <!-- References -->
+        <div style="margin: 2.5rem 0 1rem; border-top: 2px solid #cfc3b4; padding-top: 1.5rem;">
+            <h4 style="font-size:1.2rem; color:#2b5e5e;">References (Birch et al. 2020)</h4>
+            <p id="ref1" style="font-size:0.95rem; margin-top:0.8rem;">[1] Birch, J., Schnell, A. K., & Clayton, N. S. (2020). Dimensions of animal consciousness. <em>Trends in Cognitive Sciences</em>, 24(10), 789–801. <a href="https://www.cell.com/trends/cognitive-sciences/fulltext/S1364-6613%2820%2930192-3" style="color:#2b5e5e;">https://www.cell.com/trends/cognitive-sciences/fulltext/S1364-6613%2820%2930192-3</a></p>
+            <p id="ref2" style="font-size:0.95rem;">[2] LSE Research Online: <a href="https://www.sciencedirect.com/science/article/pii/S0010027723000434" style="color:#2b5e5e;">https://www.sciencedirect.com/science/article/pii/S0010027723000434</a></p>
+        </div>
+
+        <!-- navigation back -->
+        <div class="nav-back">
+            <a href="index.html" class="back-link">
+                <span style="font-size:1.5rem;">←</span> back to all nine questions
+            </a>
+            <span style="font-size:0.95rem; color:#5c6f6b;">Birch et al. · 5 dimensions · consciousness profiles</span>
+        </div>
+
+        <div class="footer-note">
+            <p>📖 direct from Birch, Schnell & Clayton (2020) · Trends in Cognitive Sciences · midterm spring 2026</p>
+        </div>
+    </div>
+</body>
+</html>
