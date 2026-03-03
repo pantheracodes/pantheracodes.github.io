@@ -7,7 +7,7 @@
     <meta content="https://pantheracodes.github.io/theAllegoryOfTheBicameralMind.jpg" property="og:image">
     <link rel="icon" type="image/jpg" href="https://hills.ccsf.edu/~ragui124/theAllegoryOfTheBicameralMind.jpg">
     <link rel="stylesheet" href="styles.css">
-    <title>Roelofs & Buchanan · Great Chain of Being · panpsychism</title>
+    <title>Birch et al. · 5 dimensions · animal consciousness profiles</title>
     <style>
         * {
             margin: 0;
@@ -95,10 +95,11 @@
             color: #2d5a4f;
             font-size: 1.1rem;
         }
+        /* Figure styling - key graph from the paper */
         .figure-container {
-            background: #ffffff;
+            background: #fffcf6;
             border-radius: 32px;
-            padding: 2rem 2rem 1.5rem;
+            padding: 2rem;
             margin: 2rem 0;
             border: 2px solid #bda78b;
             box-shadow: 0 10px 20px rgba(0,0,0,0.05);
@@ -116,54 +117,75 @@
             margin-top: 1rem;
             font-style: italic;
         }
-        .actual-figure {
+        .radar-chart {
             max-width: 100%;
             height: auto;
-            border-radius: 16px;
-            border: 1px solid #dacbb8;
-            background: #fcf6ec;
-            padding: 0.5rem;
+            background: #ffffff;
+            border-radius: 24px;
+            padding: 1rem;
         }
-        .intuition-scale {
+        .dimension-grid {
             display: flex;
             flex-direction: column;
-            gap: 1rem;
+            gap: 1.8rem;
             margin: 2rem 0;
-            background: #f3efe9;
-            border-radius: 32px;
-            padding: 2rem;
         }
-        .scale-item {
+        .dim-card {
+            background: #fffaf2;
+            border-radius: 28px;
+            padding: 1.8rem 2rem;
+            border-left: 12px solid;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+        }
+        .dim-card:nth-child(1) { border-left-color: #4a7c7c; }
+        .dim-card:nth-child(2) { border-left-color: #b58b7a; }
+        .dim-card:nth-child(3) { border-left-color: #8faa7b; }
+        .dim-card:nth-child(4) { border-left-color: #c49a6c; }
+        .dim-card:nth-child(5) { border-left-color: #7f9c8a; }
+        
+        .dim-header {
             display: flex;
             align-items: center;
             gap: 1rem;
-            flex-wrap: wrap;
+            margin-bottom: 1rem;
         }
-        .scale-category {
-            width: 140px;
-            font-weight: 600;
-            color: #2b5e5e;
+        .dim-header h3 {
+            font-size: 1.8rem;
+            font-weight: 400;
+            color: #2d5a4f;
         }
-        .scale-bar {
-            flex: 1;
-            height: 24px;
-            background: linear-gradient(90deg, #2b5e5e 0%, #2b5e5e var(--level), #d9cdbc var(--level));
-            border-radius: 40px;
-            min-width: 200px;
-            border: 1px solid #9b8262;
+        .dim-header span {
+            font-size: 2.2rem;
         }
-        .scale-percent {
-            width: 60px;
-            color: #4d6a5a;
+        .dim-definition {
+            font-size: 1.15rem;
+            margin-bottom: 1.2rem;
         }
-        .conflict-grid {
+        .evidence-list {
+            list-style: none;
+            margin: 1rem 0 0 1rem;
+        }
+        .evidence-list li {
+            font-size: 1.05rem;
+            margin-bottom: 0.8rem;
+            padding-left: 1.8rem;
+            position: relative;
+        }
+        .evidence-list li::before {
+            content: "🔬";
+            position: absolute;
+            left: 0;
+            color: #4b6b5c;
+            font-size: 1.1rem;
+        }
+        .species-profiles {
             display: flex;
             flex-wrap: wrap;
             gap: 2rem;
-            margin: 2rem 0;
+            margin: 2.5rem 0;
             justify-content: center;
         }
-        .conflict-card {
+        .species-card {
             flex: 1 1 280px;
             background: #f3efe9;
             border-radius: 32px;
@@ -171,11 +193,11 @@
             border: 1px solid #cfbcac;
             transition: transform 0.1s ease;
         }
-        .conflict-card:hover {
+        .species-card:hover {
             transform: translateY(-5px);
             background: #fff2e0;
         }
-        .conflict-card h4 {
+        .species-card h4 {
             font-size: 1.8rem;
             font-weight: 400;
             color: #2b5e5e;
@@ -183,22 +205,14 @@
             padding-bottom: 0.5rem;
             margin-bottom: 1.2rem;
         }
-        .resolution-list {
-            list-style: none;
-            margin: 1.5rem 0;
-        }
-        .resolution-list li {
-            font-size: 1.15rem;
-            margin-bottom: 1rem;
-            padding-left: 2rem;
-            position: relative;
-        }
-        .resolution-list li::before {
-            content: "⚖️";
-            position: absolute;
-            left: 0;
-            color: #b96f4b;
+        .species-card h5 {
             font-size: 1.2rem;
+            color: #4d6a5a;
+            margin: 1rem 0 0.3rem;
+        }
+        .species-card p {
+            margin: 0.3rem 0 0.8rem;
+            font-size: 1rem;
         }
         .badge {
             background: #c4d5d0;
@@ -243,172 +257,190 @@
             color: #5f6f6a;
             font-size: 0.9rem;
         }
+        .ref {
+            font-size: 0.9rem;
+            color: #5f6f7d;
+            margin-top: 0.3rem;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <!-- header -->
         <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.2rem;">
-            <span style="font-size: 2.5rem;">⛓️</span>
-            <span class="paper-ref">Roelofs & Buchanan · Philosophical Studies (2019)</span>
+            <span style="font-size: 2.5rem;">📊</span>
+            <span class="paper-ref">Birch, Schnell & Clayton · Trends in Cognitive Sciences (2020)</span>
         </div>
-        <h1>Great Chain of Being & Panpsychism</h1>
-        <div class="sub">The structured intuition · panpsychism · how they conflict</div>
+        <h1>Dimensions of Animal Consciousness</h1>
+        <div class="sub">Five dimensions · consciousness profiles · evidence in elephants, cephalopods, corvids</div>
 
-        <!-- introduction -->
+        <!-- INTRODUCTION / FRAMEWORK -->
         <div class="framework-box">
-            <p><strong>Roelofs and Buchanan (2019)</strong> analyse the tension between panpsychism—the view that consciousness is fundamental and pervasive—and our deep-seated intuitions about which things are conscious. They identify a structured pattern they call the <strong>Great Chain of Being (GCOB) intuition</strong> and explore how this conflict might be resolved [<a href="#ref1">1</a>].</p>
+            <p><strong>Birch, Schnell, and Clayton (2020)</strong> propose a multidimensional framework for understanding how consciousness varies across species [<a href="#ref1" style="color:#2b5e5e;">1</a>]. They reject the idea of a single scale from "less conscious" to "more conscious." Instead, each species has a <strong>distinctive consciousness profile</strong> across five independent dimensions.</p>
         </div>
 
         <div class="quote-block">
-            "Some philosophical theories of consciousness imply consciousness in things we would never intuitively think are conscious—most notably, panpsychism implies that consciousness is pervasive, even outside complex brains. Is this a reductio ad absurdum for such theories, or does it show that we should reject our original intuitions?" — Roelofs & Buchanan, 2019 [<a href="#ref1">1</a>]
+            "By assessing a given species against each dimension, we can construct a consciousness profile for that species. On this framework, there is no single scale along which species can be ranked as more or less conscious. Rather, each species has its own distinctive consciousness profile." — Birch et al., 2020 [<a href="#ref1" style="color:#2b5e5e;">1</a>]
         </div>
 
-        <!-- GCOB intuition section -->
-        <div class="section-title">⛓️ 1. The Great Chain of Being intuition</div>
-        <p style="font-size:1.2rem; margin-bottom:1.5rem;">The GCOB intuition is not a formal theory but a pre-theoretical, structured pattern in how we think about the distribution of consciousness. It is an <strong>ordinal ranking of confidence</strong> [<a href="#ref1">1</a>][<a href="#ref5">5</a>]:</p>
-
-        <div class="intuition-scale">
-            <div class="scale-item">
-                <span class="scale-category">Self (oneself)</span>
-                <div class="scale-bar" style="--level:100%"></div>
-                <span class="scale-percent">100%</span>
-            </div>
-            <div class="scale-item">
-                <span class="scale-category">Other humans</span>
-                <div class="scale-bar" style="--level:98%"></div>
-                <span class="scale-percent">~98%</span>
-            </div>
-            <div class="scale-item">
-                <span class="scale-category">Mammals (elephants, dogs)</span>
-                <div class="scale-bar" style="--level:85%"></div>
-                <span class="scale-percent">high</span>
-            </div>
-            <div class="scale-item">
-                <span class="scale-category">Birds, reptiles (corvids)</span>
-                <div class="scale-bar" style="--level:70%"></div>
-                <span class="scale-percent">mod-high</span>
-            </div>
-            <div class="scale-item">
-                <span class="scale-category">Fish, insects</span>
-                <div class="scale-bar" style="--level:40%"></div>
-                <span class="scale-percent">low-mod</span>
-            </div>
-            <div class="scale-item">
-                <span class="scale-category">Plants, trees</span>
-                <div class="scale-bar" style="--level:15%"></div>
-                <span class="scale-percent">very low</span>
-            </div>
-            <div class="scale-item">
-                <span class="scale-category">Rocks, tables, rivers</span>
-                <div class="scale-bar" style="--level:2%"></div>
-                <span class="scale-percent">~0%</span>
-            </div>
-        </div>
-
-        <p>This intuition forms a kind of "scale of nature" (<em>scala naturae</em>). It is not merely about intelligent behaviour—it is a core sense about the presence of an inner life, even when we understand the causal mechanisms involved [<a href="#ref1">1</a>][<a href="#ref5">5</a>].</p>
-
-        <!-- figure placeholder for possible diagram -->
+        <!-- **** KEY FIGURE FROM THE PAPER **** -->
         <div class="figure-container">
-            <div class="figure-title">📈 Figure 1: The Great Chain of Being intuition (schematic)</div>
-            <!-- if you have a JPG named greatChain.jpg, uncomment next line and delete the SVG comment -->
-            <!-- <img src="greatChain.jpg" alt="Great Chain of Being intuition diagram" class="actual-figure" style="width:100%; max-width:700px;"> -->
-            <!-- temporary SVG representation (same style as before) -->
-            <svg viewBox="0 0 600 200" style="width:100%; max-width:600px; background:#fcf6ec; border-radius:16px;">
-                <rect width="600" height="200" fill="#fcf6ec"/>
-                <text x="300" y="30" font-size="14" text-anchor="middle" fill="#2b5e5e">Ordinal confidence in consciousness</text>
-                <line x1="80" y1="60" x2="520" y2="60" stroke="#9b8262" stroke-width="2"/>
-                <text x="50" y="60" font-size="10" fill="#5f6f7d">high</text>
-                <text x="550" y="60" font-size="10" fill="#5f6f7d">low</text>
-                <!-- bars -->
-                <rect x="80" y="70" width="20" height="30" fill="#2b5e5e" opacity="0.9" /><text x="80" y="115" font-size="8" transform="rotate(-20,80,115)">self</text>
-                <rect x="130" y="72" width="20" height="28" fill="#2b5e5e" opacity="0.9"/><text x="130" y="115" font-size="8" transform="rotate(-20,130,115)">humans</text>
-                <rect x="180" y="80" width="20" height="20" fill="#2b5e5e" opacity="0.8"/><text x="180" y="115" font-size="8" transform="rotate(-20,180,115)">mammals</text>
-                <rect x="230" y="90" width="20" height="10" fill="#2b5e5e" opacity="0.6"/><text x="230" y="115" font-size="8" transform="rotate(-20,230,115)">birds</text>
-                <rect x="280" y="95" width="20" height="5" fill="#2b5e5e" opacity="0.4"/><text x="280" y="115" font-size="8" transform="rotate(-20,280,115)">fish</text>
-                <rect x="330" y="97" width="20" height="3" fill="#b58b7a" opacity="0.5"/><text x="330" y="115" font-size="8" transform="rotate(-20,330,115)">insects</text>
-                <rect x="380" y="98" width="20" height="2" fill="#b58b7a" opacity="0.4"/><text x="380" y="115" font-size="8" transform="rotate(-20,380,115)">plants</text>
-                <rect x="430" y="99" width="20" height="1" fill="#b58b7a" opacity="0.3"/><text x="430" y="115" font-size="8" transform="rotate(-20,430,115)">rocks</text>
-            </svg>
+            <div class="figure-title">📈 Key Figure: Hypothetical Consciousness Profiles</div>
+            <img 
+                src="fiveDimensions.jpg" 
+                alt="Birch et al. 2020 five dimensions figure"
+                class="actual-figure"
+                style="width:100%;max-width:700px;"
+            >
             <div class="figure-caption">
-                <strong>Figure 1 (schematic):</strong> The Great Chain of Being intuition ranks our confidence in consciousness from self (highest) to rocks (near zero). Adapted from Roelofs & Buchanan's description [<a href="#ref1">1</a>].
-            </div>
-        </div>
-        <div class="figure-container">
-    <div class="figure-title">📊 Figure 2: The five levels of the Great Chain of Being (Roelofs & Buchanan)</div>
-    <img src="fiveLevels.png" alt="Five-level hierarchy of intuitions about consciousness" class="actual-figure" style="width:100%; max-width:700px;">
-    <div class="figure-caption">
-        <strong>Levels of the Great Chain of Being intuition (adapted from Roelofs & Buchanan, 2019):</strong>
-        <strong>Level 1:</strong> Oneself (certain).
-        <strong>Level 2:</strong> Other humans, animals with complex brains.
-        <strong>Level 3:</strong> Animals with less complex brains (insects, fish).
-        <strong>Level 4:</strong> Living but brainless things (trees, jellyfish, bacteria, embryos, dreamless sleepers).
-        <strong>Level 5:</strong> Completely lifeless things (rocks, raindrops, radiators). [<a href="#ref1">1</a>]
-    </div>
-</div>
-
-        <!-- panpsychism section -->
-        <div class="section-title">🌌 2. What is panpsychism?</div>
-        <p style="font-size:1.2rem;">Panpsychism is the view that <strong>consciousness is fundamental and pervasive</strong> in the natural world. It holds that consciousness is not emergent only in complex brains but is a basic feature of physical reality, perhaps inherent in all matter [<a href="#ref1">1</a>].</p>
-        <div class="quote-block" style="margin:1rem 0 2rem;">
-            For the purposes of their argument, Roelofs and Buchanan focus on the implication: if consciousness is fundamental and pervasive, then it is present in <strong>all or most composite entities</strong>—including rocks, tables, plants, and rivers—not just in humans and animals.
-        </div>
-
-        <!-- conflict section -->
-        <div class="section-title">⚡ 3. How do they conflict?</div>
-        <p style="font-size:1.2rem;">The conflict is direct: <strong>panpsychism implies that many things at the bottom of the Great Chain (rocks, tables) are conscious, which directly contradicts the GCOB intuition that they are not</strong> [<a href="#ref1">1</a>]. This creates a philosophical puzzle: is this a <em>reductio</em> of panpsychism, or a reason to reject the intuition?</p>
-
-        <div class="conflict-grid">
-            <div class="conflict-card">
-                <h4>⛓️ GCOB intuition</h4>
-                <p><span class="badge">ordinal ranking</span> clear gradient from self (certain) to rocks (zero).</p>
-                <p><span class="badge">source</span> pre-theoretical, deeply embedded.</p>
-                <p><span class="badge">implication</span> rocks are not conscious.</p>
-            </div>
-            <div class="conflict-card">
-                <h4>🌌 Panpsychism</h4>
-                <p><span class="badge">pervasive</span> consciousness is fundamental, in all matter.</p>
-                <p><span class="badge">source</span> theoretical argument from philosophy of mind.</p>
-                <p><span class="badge">implication</span> rocks (composite entities) are conscious.</p>
+                <strong>Figure 1 (adapted from Birch et al. 2020):</strong> Hypothetical consciousness profiles for elephants, corvids, and cephalopods across the five dimensions. Higher values indicate richer or more integrated experience in that dimension [<a href="#ref2" style="color:#2b5e5e;">2</a>][<a href="#ref5" style="color:#2b5e5e;">5</a>].
             </div>
         </div>
 
-        <!-- resolutions -->
-        <div class="section-title">🧩 4. How could the conflict be resolved?</div>
-        <p>Roelofs and Buchanan explore several options, favouring more nuanced approaches [<a href="#ref1">1</a>][<a href="#ref5">5</a>]:</p>
+        <!-- 5 DIMENSIONS SECTION -->
+        <div class="section-title">🔬 The five dimensions of animal consciousness <small>(with empirical evidence)</small></div>
 
-        <ul class="resolution-list">
-            <li><strong>Reject the theory:</strong> Conclude that panpsychism is false because it clashes too severely with a deeply held intuition (the GCOB acts as a reductio).</li>
-            <li><strong>Reject the intuition:</strong> Dismiss the GCOB intuition as a mere cognitive bias or folk prejudice with no philosophical weight.</li>
-            <li><strong>Re-interpret / paraphrase the intuition (favoured):</strong> The intuition might be tracking something <em>related to</em> but different from consciousness, such as:
-                <ul style="margin-left:2rem; list-style-type:circle; margin-top:0.5rem;">
-                    <li><strong>Evaluative richness:</strong> We might be ranking the <em>richness and complexity</em> of experience, not sheer presence/absence. A panpsychist could agree a rock's experience is so simple as to be practically negligible.</li>
-                    <li><strong>Limits of mindreading:</strong> Our intuitive "mindreading" system is designed to detect minds <em>like ours</em>. It fails to give a clear answer for radically different entities, resulting in the graded uncertainty (the GCOB) [<a href="#ref5">5</a>].</li>
+        <div class="dimension-grid">
+            <!-- 1. Perceptual richness -->
+            <div class="dim-card">
+                <div class="dim-header">
+                    <span>👁️</span>
+                    <h3>1. Perceptual richness (p-richness)</h3>
+                </div>
+                <div class="dim-definition">
+                    <p><strong>Definition:</strong> The level of detail and complexity in an animal's conscious sensory experience. Varies by modality (vision, olfaction, etc.). [<a href="#ref1" style="color:#2b5e5e;">1</a>][<a href="#ref5" style="color:#2b5e5e;">5</a>]</p>
+                </div>
+                <ul class="evidence-list">
+                    <li><strong>Elephants:</strong> Olfactory richness is extremely high — they have the largest number of olfactory receptor genes of any species tested (around 2,000), and can distinguish human ethnic groups by scent cues [<a href="#ref1" style="color:#2b5e5e;">1</a>][<a href="#ref9" style="color:#2b5e5e;">9</a>].</li>
+                    <li><strong>Corvids:</strong> Visual richness is exceptional — flicker fusion frequency up to ~120-140 Hz (humans ~60 Hz); Eurasian jays perceive 120 Hz video as smooth [<a href="#ref5" style="color:#2b5e5e;">5</a>]. New Caledonian crows have wide binocular field for tool use [<a href="#ref5" style="color:#2b5e5e;">5</a>].</li>
+                    <li><strong>Cephalopods:</strong> Visual richness with polarization sensitivity and skin-based "sight" (light-sensitive proteins in skin) [<a href="#ref4" style="color:#2b5e5e;">4</a>].</li>
                 </ul>
-            </li>
-        </ul>
+            </div>
 
-        <div class="quote-block">
-            "Perhaps the intuition is actually tracking something related to but different from consciousness, such as the evaluative richness of experience, or the limits of our mindreading capacities." — Roelofs & Buchanan [<a href="#ref1">1</a>]
+            <!-- 2. Evaluative richness -->
+            <div class="dim-card">
+                <div class="dim-header">
+                    <span>❤️</span>
+                    <h3>2. Evaluative richness (e-richness)</h3>
+                </div>
+                <div class="dim-definition">
+                    <p><strong>Definition:</strong> The richness of affective/emotional experience — pleasure, pain, moods, valence. [<a href="#ref1" style="color:#2b5e5e;">1</a>]</p>
+                </div>
+                <ul class="evidence-list">
+                    <li><strong>Elephants:</strong> Strong evidence for grief, mourning, play, and emotional contagion [<a href="#ref9" style="color:#2b5e5e;">9</a>].</li>
+                    <li><strong>Corvids:</strong> Play behavior, consolation after conflict (crows console victims of aggression), mood-congruent judgment (optimism/pessimism tests) [<a href="#ref5" style="color:#2b5e5e;">5</a>].</li>
+                    <li><strong>Cephalopods:</strong> Pain-related responses — octopuses avoid places where they experienced pain, show conditioned place aversion; motivational trade-offs (e.g., hermit crabs) [<a href="#ref1" style="color:#2b5e5e;">1</a>][<a href="#ref9" style="color:#2b5e5e;">9</a>].</li>
+                </ul>
+            </div>
+
+            <!-- 3. Integration at a time (synchronic unity) -->
+            <div class="dim-card">
+                <div class="dim-header">
+                    <span>🔄</span>
+                    <h3>3. Integration at a time (synchronic unity)</h3>
+                </div>
+                <div class="dim-definition">
+                    <p><strong>Definition:</strong> The degree to which diverse experiences are bound into a unified conscious moment. [<a href="#ref1" style="color:#2b5e5e;">1</a>]</p>
+                </div>
+                <ul class="evidence-list">
+                    <li><strong>Elephants:</strong> Strong cross-modal integration (e.g., matching olfactory and visual cues) [<a href="#ref9" style="color:#2b5e5e;">9</a>].</li>
+                    <li><strong>Corvids:</strong> Moderate integration — hemispheric specialization but pallial connectivity allows binding; interocular transfer studies [<a href="#ref5" style="color:#2b5e5e;">5</a>].</li>
+                    <li><strong>Cephalopods:</strong> Octopuses have distributed nervous system (2/3 neurons in arms) — possibly less synchronic unity; each arm may have semi-autonomous processing [<a href="#ref1" style="color:#2b5e5e;">1</a>][<a href="#ref4" style="color:#2b5e5e;">4</a>].</li>
+                </ul>
+            </div>
+
+            <!-- 4. Integration across time (diachronic unity) -->
+            <div class="dim-card">
+                <div class="dim-header">
+                    <span>⏳</span>
+                    <h3>4. Integration across time (diachronic unity)</h3>
+                </div>
+                <div class="dim-definition">
+                    <p><strong>Definition:</strong> Binding experiences across time — episodic memory, future planning, mental time travel. [<a href="#ref1" style="color:#2b5e5e;">1</a>]</p>
+                </div>
+                <ul class="evidence-list">
+                    <li><strong>Corvids:</strong> Scrub jays demonstrate episodic-like memory (what-where-when) and future planning — caching food for future needs, even trading off current wants [<a href="#ref5" style="color:#2b5e5e;">5</a>][<a href="#ref9" style="color:#2b5e5e;">9</a>]. Ravens plan for tool use and bartering [<a href="#ref5" style="color:#2b5e5e;">5</a>].</li>
+                    <li><strong>Cephalopods:</strong> Cuttlefish show source memory (remember whether they saw or smelled prey) [<a href="#ref9" style="color:#2b5e5e;">9</a>].</li>
+                    <li><strong>Elephants:</strong> Long-term spatial memory — remember waterholes and social associates for decades [<a href="#ref1" style="color:#2b5e5e;">1</a>].</li>
+                </ul>
+            </div>
+
+            <!-- 5. Self-consciousness -->
+            <div class="dim-card">
+                <div class="dim-header">
+                    <span>🪞</span>
+                    <h3>5. Self-consciousness (selfhood)</h3>
+                </div>
+                <div class="dim-definition">
+                    <p><strong>Definition:</strong> Awareness of self as distinct individual; theory of mind; mirror self-recognition. [<a href="#ref1" style="color:#2b5e5e;">1</a>]</p>
+                </div>
+                <ul class="evidence-list">
+                    <li><strong>Corvids:</strong> Magpies pass mirror self-recognition test; scrub jays show theory of mind — they re-cache food when observed by another jay [<a href="#ref5" style="color:#2b5e5e;">5</a>].</li>
+                    <li><strong>Elephants:</strong> Mirror self-recognition in Asian elephants; consolation behavior suggests empathy [<a href="#ref9" style="color:#2b5e5e;">9</a>].</li>
+                    <li><strong>Cephalopods:</strong> Octopuses show contingency testing (possible self-directed behavior) but no clear mirror self-recognition yet [<a href="#ref4" style="color:#2b5e5e;">4</a>].</li>
+                </ul>
+            </div>
         </div>
 
-        <!-- detailed analysis from paper -->
+        <!-- SPECIES PROFILES (detailed) -->
+        <div class="section-title">🐘🦑🐦‍⬛ Consciousness profiles: elephants, cephalopods, corvids</div>
+
+        <div class="species-profiles">
+            <!-- elephants -->
+            <div class="species-card">
+                <h4>🐘 Elephants</h4>
+                <p><span class="badge">p-richness</span> Olfactory: extremely high (2,000 olfactory genes). Visual: moderate, less detailed than primates [<a href="#ref1" style="color:#2b5e5e;">1</a>].</p>
+                <p><span class="badge">e-richness</span> High: grief, play, emotional contagion, mourning [<a href="#ref9" style="color:#2b5e5e;">9</a>].</p>
+                <p><span class="badge">synchronic unity</span> Strong integration across senses (e.g., smell+vision) [<a href="#ref9" style="color:#2b5e5e;">9</a>].</p>
+                <p><span class="badge">diachronic unity</span> Excellent long-term memory (waterholes, social bonds) [<a href="#ref1" style="color:#2b5e5e;">1</a>].</p>
+                <p><span class="badge">selfhood</span> Mirror self-recognition in Asian elephants; empathy indicators [<a href="#ref9" style="color:#2b5e5e;">9</a>].</p>
+            </div>
+
+            <!-- cephalopods -->
+            <div class="species-card">
+                <h4>🐙 Cephalopods</h4>
+                <p><span class="badge">p-richness</span> Polarized vision, skin light-sensitivity; visual detail high but differs by species [<a href="#ref4" style="color:#2b5e5e;">4</a>].</p>
+                <p><span class="badge">e-richness</span> Pain responses, conditioned place aversion, motivational trade-offs [<a href="#ref1" style="color:#2b5e5e;">1</a>].</p>
+                <p><span class="badge">synchronic unity</span> Possibly lower due to distributed nervous system (arm autonomy) [<a href="#ref1" style="color:#2b5e5e;">1</a>][<a href="#ref4" style="color:#2b5e5e;">4</a>].</p>
+                <p><span class="badge">diachronic unity</span> Cuttlefish source memory (smell vs. sight); future planning? [<a href="#ref9" style="color:#2b5e5e;">9</a>]</p>
+                <p><span class="badge">selfhood</span> No clear mirror recognition; contingency testing (awareness of own body?) [<a href="#ref4" style="color:#2b5e5e;">4</a>].</p>
+            </div>
+
+            <!-- corvids -->
+            <div class="species-card">
+                <h4>🐦‍⬛ Corvids</h4>
+                <p><span class="badge">p-richness</span> High visual acuity, flicker fusion >120 Hz, wide binocular field (tool users) [<a href="#ref5" style="color:#2b5e5e;">5</a>].</p>
+                <p><span class="badge">e-richness</span> Play, consolation after conflict, mood bias [<a href="#ref5" style="color:#2b5e5e;">5</a>].</p>
+                <p><span class="badge">synchronic unity</span> Moderate: interhemispheric transfer but some specialization [<a href="#ref5" style="color:#2b5e5e;">5</a>].</p>
+                <p><span class="badge">diachronic unity</span> Episodic memory, future planning (caching for tomorrow), tool manufacture [<a href="#ref5" style="color:#2b5e5e;">5</a>][<a href="#ref9" style="color:#2b5e5e;">9</a>].</p>
+                <p><span class="badge">selfhood</span> Magpies pass mirror test; scrub jays theory of mind (re-caching when observed) [<a href="#ref5" style="color:#2b5e5e;">5</a>].</p>
+            </div>
+        </div>
+
+        <!-- Additional evidence notes -->
         <div style="background:#f9f3ec; border-radius:28px; padding:1.5rem; margin:2rem 0;">
-            <h4 style="color:#2b5e5e;">📋 Key insights from Roelofs & Buchanan (2019)</h4>
+            <h4 style="color:#2b5e5e;">📋 Selected experimental evidence (from Birch et al. and follow-up studies)</h4>
             <ul style="margin-top:1rem; list-style-type:disc; padding-left:2rem;">
-                <li>The GCOB intuition is robust and structured—it's not just a binary "yes/no" but a graded ordinal ranking [<a href="#ref5">5</a>].</li>
-                <li>Panpsychism's conflict with this intuition is a central challenge for the view, but not necessarily fatal.</li>
-                <li>Analogous conflicts arise for other theories (e.g., integrated information theory implies consciousness in simple systems) [<a href="#ref1">1</a>].</li>
-                <li>Nuanced approaches aim to "reconcile" rather than fully reject either side—e.g., by showing the intuition tracks something else, or by circumscribing which parts of the intuition are trustworthy [<a href="#ref1">1</a>][<a href="#ref5">5</a>].</li>
-                <li>They introduce the idea of "Inference from Understanding of Self" (IUS) and "Explanation by Analogy" (EA) as frameworks for understanding how we attribute consciousness to others [<a href="#ref5">5</a>].</li>
+                <li><strong>Corvid visual consciousness:</strong> Nieder et al. (2020) recorded single neurons in crow NCL — two-stage processing: first unconscious detection, later burst correlates with conscious perception (similar to primates) [<a href="#ref5" style="color:#2b5e5e;">5</a>].</li>
+                <li><strong>Cephalopod pain:</strong> Hermit crabs (analogous) leave a preferred shell when shocked; motivational trade-offs indicate affective experience [<a href="#ref9" style="color:#2b5e5e;">9</a>].</li>
+                <li><strong>Elephant olfaction:</strong> African elephants distinguish human ethnic groups by scent alone; can follow scent trails [<a href="#ref9" style="color:#2b5e5e;">9</a>].</li>
+                <li><strong>Corvid future planning:</strong> Western scrub-jays cache food in specific locations where they expect to be hungry next morning; ravens barter tokens for future reward [<a href="#ref5" style="color:#2b5e5e;">5</a>].</li>
             </ul>
         </div>
 
-        <!-- references -->
+        <!-- summary quote -->
+        <div class="quote-block">
+            "A species might be high on perceptual richness but low on self-consciousness, or high on evaluative richness but low on diachronic unity. There is no single answer to 'which is more conscious?' – only comparisons dimension by dimension." [<a href="#ref1" style="color:#2b5e5e;">1</a>][<a href="#ref3" style="color:#2b5e5e;">3</a>]
+        </div>
+
+        <!-- REFERENCES -->
         <div style="margin: 2.5rem 0 1rem; border-top: 2px solid #cfc3b4; padding-top: 1.5rem;">
             <h4 style="font-size:1.2rem; color:#2b5e5e;">References</h4>
-            <p id="ref1" style="font-size:0.95rem; margin-top:0.8rem;">[1] Roelofs, L., & Buchanan, J. (2019). Panpsychism, intuitions, and the great chain of being. <em>Philosophical Studies</em>, 176, 2991–3017. <a href="https://link.springer.com/article/10.1007/s11098-018-1160-1" style="color:#2b5e5e;">doi:10.1007/s11098-018-1160-1</a></p>
-            <p id="ref5" style="font-size:0.95rem;">[5] See also Roelofs & Buchanan's discussion of the "Inference from Understanding of Self" (IUS) and "Explanation by Analogy" (EA) in §§4–5 of the paper.</p>
+            <p id="ref1" style="font-size:0.95rem; margin-top:0.8rem;">[1] Birch, J., Schnell, A. K., & Clayton, N. S. (2020). Dimensions of animal consciousness. <em>Trends in Cognitive Sciences</em>, 24(10), 789–801. <a href="https://www.sciencedirect.com/science/article/pii/S1364661320301923?via%3Dihub" style="color:#2b5e5e;">doi:10.1016/j.tics.2020.07.007</a></p>
+            <p id="ref2" style="font-size:0.95rem;">[2] Figure adapted from Birch et al. (2020) under CC BY 4.0; also <a href="https://researchonline.lse.ac.uk/id/eprint/106259/" style="color:#2b5e5e;">eprints.lse.ac.uk/106259</a></p>
+            <p id="ref4" style="font-size:0.95rem;">[3] Lane, W. M., Ajuwon, V., & Clayton, N. S. (2025). Cephalopod consciousness on “their own terms”. <em>Animal Sentience</em>, 37(6). <a href="https://www.wellbeingintlstudiesrepository.org/animsent/vol10/iss37/6/" style="color:#2b5e5e;">doi:10.51291/2377-7478.1910</a></p>
+            <p id="ref5" style="font-size:0.95rem;">[4] Veit, W., Browning, H., Garcia-Pelegrin, E., et al. (2025). Dimensions of corvid consciousness. <em>Animal Cognition</em>, 28(35). <a href="https://link.springer.com/article/10.1007/s10071-025-01949-y" style="color:#2b5e5e;">doi:10.1007/s10071-025-01949-y</a></p>
+            <p id="ref9" style="font-size:0.95rem;">[5] Additional references from Birch et al. supplementary: Plotnik, Raby, etc.</p>
         </div>
 
         <!-- navigation back -->
@@ -416,11 +448,11 @@
             <a href="index.html" class="back-link">
                 <span style="font-size:1.5rem;">←</span> back to all nine questions
             </a>
-            <span style="font-size:0.95rem; color:#5c6f6b;">Roelofs & Buchanan · GCOB · panpsychism</span>
+            <span style="font-size:0.95rem; color:#5c6f6b;">Birch et al. · five dimensions · consciousness profiles</span>
         </div>
 
         <div class="footer-note">
-            <p>📖 based on Roelofs, L., & Buchanan, J. (2019) Philosophical Studies · midterm spring 2026</p>
+            <p>📖 direct from Birch, Schnell & Clayton (2020) · Trends in Cognitive Sciences · with added corvid & cephalopod evidence (2025) · midterm spring 2026</p>
         </div>
     </div>
 </body>
