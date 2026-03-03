@@ -1,18 +1,18 @@
-body {
-  background-color: #000; /* Deep black theater background */
-  margin: 0;
+.theater-zone {
+  background-color: #fff8986; /* Deep black theater background */
+  margin: 10;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  padding: 40px 0;
 }
 
 .theater-container {
   width: 90%; /* Leaves a small "border" around the screen */
-  max-width: 800px;
+  max-width: 600px;
   background: #1a1a1a; /* Dark gray player frame */
-  padding: 20px;
-  border-radius: 15px;
+  padding: 10px;
+  border-radius: 12px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.5); /* Glow effect */
 }
 
