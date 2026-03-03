@@ -1,3 +1,27 @@
+body {
+  background-color: #000; /* Deep black theater background */
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.theater-container {
+  width: 90%; /* Leaves a small "border" around the screen */
+  max-width: 800px;
+  background: #1a1a1a; /* Dark gray player frame */
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5); /* Glow effect */
+}
+
+video {
+  width: 100%; /* Fits the video inside your "theater" frame */
+  border-radius: 8px;
+  display: block;
+}
+
 * {
 
     box-sizing: border-box;
@@ -20,6 +44,7 @@ body {
 
     text-align: center;
     padding: 32px;
+    display: block;
 }
 
 .row {
