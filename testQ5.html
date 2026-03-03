@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta content="https://hills.ccsf.edu/~ragui124/theAllegoryOfTheBicameralMind.jpg" property="og:image">
+    <link rel="icon" type="image/jpg" href="https://hills.ccsf.edu/~ragui124/theAllegoryOfTheBicameralMind.jpg">
+    <link rel="stylesheet" href="styles.css">
+    <title>Schwitzgebel · 5 dimensions of sparseness/abundance · snail lessons</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: #f0ede5;
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.6;
+            color: #2d3a3a;
+            padding: 2rem 1rem;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            max-width: 1000px;
+            width: 100%;
+            margin: 2rem auto;
+            background: #fffaf2;
+            border-radius: 48px;
+            box-shadow: 0 25px 45px rgba(40, 30, 10, 0.15);
+            padding: 3rem 2.5rem;
+            border: 1px solid #dacbb8;
+        }
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 400;
+            letter-spacing: -0.5px;
+            color: #2b5e5e;
+            border-left: 12px solid #9bb8a8;
+            padding-left: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+        .sub {
+            font-size: 1.2rem;
+            color: #5f6f7d;
+            margin-bottom: 2rem;
+            font-style: italic;
+            padding-left: 3rem;
+        }
+        .paper-ref {
+            background: #e9e2d9;
+            border-radius: 60px;
+            padding: 0.3rem 1.5rem;
+            font-size: 0.9rem;
+            display: inline-block;
+            margin-bottom: 1.5rem;
+            border: 1px solid #bda78b;
+        }
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 400;
+            color: #1f5a4c;
+            margin: 2.5rem 0 1rem;
+            border-bottom: 2px dotted #b2956e;
+            padding-bottom: 0.3rem;
+        }
+        .taxonomy-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+            margin: 2rem 0;
+        }
+        .dimension-card {
+            background: #f3efe9;
+            border-radius: 32px;
+            padding: 1.5rem 1.8rem;
+            border-left: 12px solid;
+            box-shadow: 0 5px 10px rgba(0,0,0,0.03);
+        }
+        .dimension-card:nth-child(1) { border-left-color: #6a8e8e; }
+        .dimension-card:nth-child(2) { border-left-color: #b58b7a; }
+        .dimension-card:nth-child(3) { border-left-color: #a7b892; }
+        .dimension-card:nth-child(4) { border-left-color: #b59d79; }
+        .dimension-card:nth-child(5) { border-left-color: #7f9c8a; }
+        
+        .dim-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+        .dim-header h3 {
+            font-size: 1.8rem;
+            font-weight: 400;
+            color: #2d5a4f;
+        }
+        .dim-header span {
+            font-size: 2.2rem;
+        }
+        .dim-definition {
+            font-size: 1.15rem;
+            margin-bottom: 0.8rem;
+        }
+        .dim-contrast {
+            display: flex;
+            gap: 1.5rem;
+            margin: 0.8rem 0 0.5rem;
+            flex-wrap: wrap;
+        }
+        .sparse {
+            background: #f0e0d8;
+            border-radius: 24px;
+            padding: 0.5rem 1.2rem;
+            flex: 1;
+            border: 1px solid #b58b7a;
+        }
+        .abundant {
+            background: #d8e8e0;
+            border-radius: 24px;
+            padding: 0.5rem 1.2rem;
+            flex: 1;
+            border: 1px solid #7f9c8a;
+        }
+        .sparse h4, .abundant h4 {
+            font-size: 1.2rem;
+            margin-bottom: 0.3rem;
+        }
+        .refrigerator-note {
+            background: #e6dcd0;
+            border-radius: 28px;
+            padding: 1.2rem 1.8rem;
+            margin: 1.5rem 0;
+            border: 2px solid #baa385;
+            font-style: italic;
+        }
+        .lessons-block {
+            background: #fffaf2;
+            border-radius: 32px;
+            padding: 2rem;
+            margin: 2rem 0;
+            border: 1px solid #cfbcac;
+        }
+        .lessons-list {
+            list-style: none;
+            margin: 1.5rem 0;
+        }
+        .lessons-list li {
+            font-size: 1.15rem;
+            margin-bottom: 1.2rem;
+            padding-left: 2.2rem;
+            position: relative;
+        }
+        .lessons-list li::before {
+            content: "🐌";
+            position: absolute;
+            left: 0;
+            color: #6b4f3a;
+            font-size: 1.3rem;
+        }
+        .quote-block {
+            background: #f0ede5;
+            border-radius: 28px;
+            padding: 1.5rem 2rem;
+            margin: 2rem 0;
+            font-style: italic;
+            border-left: 8px solid #9bb8a8;
+            color: #2d5a4f;
+        }
+        .nav-back {
+            margin-top: 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 2px solid #cfc3b4;
+            padding-top: 2rem;
+        }
+        .back-link {
+            background: #f0ede5;
+            padding: 0.8rem 2rem;
+            border-radius: 60px;
+            text-decoration: none;
+            color: #2d3a3a;
+            font-weight: 600;
+            border: 1px solid #b59d79;
+            transition: 0.15s;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+        .back-link:hover {
+            background: #e4dacd;
+            border-color: #8d6e4c;
+            color: #1a3636;
+            transform: scale(1.02);
+        }
+        .footer-note {
+            text-align: center;
+            margin-top: 2rem;
+            color: #5f6f6a;
+            font-size: 0.9rem;
+        }
+        .bibref {
+            font-size: 0.95rem;
+            margin: 0.5rem 0;
+            color: #4b6b5c;
+        }
+        hr {
+            border: none;
+            border-top: 1px dashed #c3b4a2;
+            margin: 1.5rem 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- header -->
+        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.2rem;">
+            <span style="font-size: 2.5rem;">🐌</span>
+            <span class="paper-ref">Schwitzgebel · "Is There Something It’s Like to Be a Garden Snail?" (2020)</span>
+        </div>
+        <h1>Five dimensions of sparseness or abundance</h1>
+        <div class="sub">Schwitzgebel's taxonomy · lessons for snail consciousness</div>
+
+        <!-- introduction -->
+        <div class="quote-block">
+            "The question of garden snail consciousness is emblematic of the more general issue of the sparseness or abundance of consciousness in the universe, on Earth, and in your own mind." [<a href="#ref1" style="color:#2b5e5e;">1</a>]
+        </div>
+
+        <p style="font-size:1.2rem; margin-bottom:1.5rem;">Schwitzgebel identifies <strong>five partly-independent dimensions</strong> along which one might hold a sparse or abundant view of consciousness. These dimensions apply across entities, across time, and within a single conscious moment. The garden snail serves as a diagnostic case that exposes our epistemic limitations across all five dimensions [<a href="#ref1" style="color:#2b5e5e;">1</a>].</p>
+
+        <!-- THE FIVE DIMENSIONS (directly from the text) -->
+        <div class="section-title">📐 The five dimensions (Schwitzgebel's taxonomy)</div>
+
+        <div class="taxonomy-grid">
+            <!-- Dimension 1: Entity sparseness/abundance -->
+            <div class="dimension-card">
+                <div class="dim-header">
+                    <span>🌍</span>
+                    <h3>1. Entity sparseness / abundance</h3>
+                </div>
+                <div class="dim-definition">
+                    <p><strong>Definition:</strong> How many entities in the universe possess consciousness? Few (sparse) or many (abundant)? [<a href="#ref1" style="color:#2b5e5e;">1</a>]</p>
+                </div>
+                <div class="dim-contrast">
+                    <div class="sparse">
+                        <h4>🌵 Sparse view</h4>
+                        <p>Only humans and maybe a few other species are conscious. Snails, fetuses, robots, worms, group entities – almost certainly not.</p>
+                    </div>
+                    <div class="abundant">
+                        <h4>🌊 Abundant view</h4>
+                        <p>Consciousness is widespread – possibly in all animals, maybe plants, perhaps even robots or fundamental particles.</p>
+                    </div>
+                </div>
+                <p style="margin-top:0.8rem;"><em>Snail relevance:</em> "Our question so far has been whether snails are among the entities who possess consciousness." [<a href="#ref1" style="color:#2b5e5e;">1</a>]</p>
+            </div>
+
+            <!-- Dimension 2: State sparseness/abundance -->
+            <div class="dimension-card">
+                <div class="dim-header">
+                    <span>⏰</span>
+                    <h3>2. State sparseness / abundance</h3>
+                </div>
+                <div class="dim-definition">
+                    <p><strong>Definition:</strong> For an entity that is sometimes conscious, how much of the time is it conscious? Always (abundant) or only rarely (sparse)? [<a href="#ref1" style="color:#2b5e5e;">1</a>]</p>
+                </div>
+                <div class="dim-contrast">
+                    <div class="sparse">
+                        <h4>😴 Sparse view</h4>
+                        <p>We are often not conscious at all – during dreamless sleep, habitual activity, "flow" states. Maybe we're conscious only in rare moments of explicit self-reflection.</p>
+                    </div>
+                    <div class="abundant">
+                        <h4>✨ Abundant view</h4>
+                        <p>Even when not awake or in REM, we have dreams or dreamlike experiences. Driving absent-mindedly, we don't blank out completely.</p>
+                    </div>
+                </div>
+                <div class="refrigerator-note">
+                    <span style="font-size:1.5rem; margin-right:0.5rem;">🧊</span> 
+                    <strong>The refrigerator light error:</strong> We might think we're always conscious because whenever we check, we are – like thinking the fridge light is always on because it's on when we open the door. [Thomas 1999, cited in <a href="#ref1" style="color:#2b5e5e;">1</a>]
+                </div>
+            </div>
+
+            <!-- Dimension 3: Modal sparseness/abundance -->
+            <div class="dimension-card">
+                <div class="dim-header">
+                    <span>👂👁️</span>
+                    <h3>3. Modal sparseness / abundance</h3>
+                </div>
+                <div class="dim-definition">
+                    <p><strong>Definition:</strong> Within a conscious entity at a time, how many modalities of experience occur simultaneously? One or two (sparse) or many (abundant)? [<a href="#ref1" style="color:#2b5e5e;">1</a>]</p>
+                </div>
+                <div class="dim-contrast">
+                    <div class="sparse">
+                        <h4>🎯 Sparse view</h4>
+                        <p>When thinking about a meeting, you have no auditory experience of the clock tower, no tactile experience of your feet in shoes. Those are processed non-consciously.</p>
+                    </div>
+                    <div class="abundant">
+                        <h4>🌈 Abundant view</h4>
+                        <p>People normally have lots of experiences at once – vision, hearing, touch, proprioception – though most are peripheral and quickly forgotten.</p>
+                    </div>
+                </div>
+                <p style="margin-top:0.8rem;"><em>Refrigerator light applies here too:</em> We might think we always feel our feet in shoes because we notice when we check.</p>
+            </div>
+
+            <!-- Dimension 4: Width sparseness/abundance -->
+            <div class="dimension-card">
+                <div class="dim-header">
+                    <span>📏</span>
+                    <h3>4. Width sparseness / abundance</h3>
+                </div>
+                <div class="dim-definition">
+                    <p><strong>Definition:</strong> Within a conscious modality at a time, how wide is the band of experience? Narrow (sparse) or wide (abundant)? [<a href="#ref1" style="color:#2b5e5e;">1</a>]</p>
+                    <p style="font-size:1rem; margin-top:0.3rem;">Width includes angular width (field of vision), breadth of field, bandwidth, richness of information.</p>
+                </div>
+                <div class="dim-contrast">
+                    <div class="sparse">
+                        <h4>🎯 Sparse view</h4>
+                        <p>Reading a book: you experience only the small portion you're looking at directly, not the whole page or surrounding environment.</p>
+                    </div>
+                    <div class="abundant">
+                        <h4>🌅 Abundant view</h4>
+                        <p>You normally experience the whole page, the environment beyond, background noise while listening, proprioception of your whole body.</p>
+                    </div>
+                </div>
+                <p style="margin-top:0.8rem;"><em>Examples:</em> Do you experience your head tilt, back angle, left foot while driving? Abundant says yes; sparse says no.</p>
+            </div>
+
+            <!-- Dimension 5: Property sparseness/abundance -->
+            <div class="dimension-card">
+                <div class="dim-header">
+                    <span>🎨</span>
+                    <h3>5. Property sparseness / abundance</h3>
+                </div>
+                <div class="dim-definition">
+                    <p><strong>Definition:</strong> Within the experienced band of a modality, how many types of properties are phenomenally experienced? Few (sparse) or many (abundant)? [<a href="#ref1" style="color:#2b5e5e;">1</a>]</p>
+                </div>
+                <div class="dim-contrast">
+                    <div class="sparse">
+                        <h4>📐 Sparse view</h4>
+                        <p>Visual experience includes only low-level properties: shape, color, orientation. Not high-level properties like "being a tree" or "being an inviting place to sit."</p>
+                    </div>
+                    <div class="abundant">
+                        <h4>🌳 Abundant view</h4>
+                        <p>We directly experience high-level properties – we see a tree <em>as a tree</em>, a face <em>as angry</em>.</p>
+                    </div>
+                </div>
+                <p style="margin-top:0.8rem;"><em>Note:</em> This dimension partly overlaps with modal and width questions but is conceptually distinct.</p>
+            </div>
+        </div>
+
+        <!-- Summary statement from Schwitzgebel -->
+        <div style="background:#f3efe9; border-radius:28px; padding:1.5rem; margin:2rem 0;">
+            <p style="font-size:1.15rem;">"To review this taxonomy: Lots of entities might have conscious experiences, or only a few. Within conscious entities, they might be conscious almost all of the time or only rarely. In those moments of consciousness, they might have many modalities of experience at once or only a few. Within a conscious modality of an entity at a particular moment, there might be wide band of experience or only a narrow band. And within whatever band of experience is conscious in a modality in an entity at a time, there might be a wealth of experienced property types or only a few. All of these issues admit of considerable debate." [<a href="#ref1" style="color:#2b5e5e;">1</a>]</p>
+        </div>
+
+        <!-- LESSONS FOR SNAIL CONSCIOUSNESS -->
+        <div class="section-title">🐌 Lessons for thinking about consciousness in a snail</div>
+
+        <div class="lessons-block">
+            <ul class="lessons-list">
+                <li><strong>The snail is a diagnostic case across all five dimensions:</strong> We cannot confidently place snails on any of these dimensions. Do they have entity consciousness? How much of the time? How many modalities? How wide? What properties? Our ignorance spans the entire taxonomy [<a href="#ref1" style="color:#2b5e5e;">1</a>].</li>
+                
+                <li><strong>Refrigerator light error applies interspecies:</strong> Just as we might overestimate our own consciousness due to checking bias, we might project human-like consciousness onto snails because we observe them when they're active. But a snail at rest might be experientially blank [<a href="#ref1" style="color:#2b5e5e;">1</a>].</li>
+                
+                <li><strong>Modal and width questions are even harder for snails:</strong> Do snails have olfactory experience? Tactile? Visual (they have primitive eyes)? Proprioceptive? Even if they have some experience, the bandwidth might be extremely narrow—perhaps just a single undifferentiated feeling of "something" [<a href="#ref1" style="color:#2b5e5e;">1</a>].</li>
+                
+                <li><strong>Property sparseness:</strong> If snails are conscious, their experience is likely extremely property-sparse—maybe only very simple valence (attraction/aversion) without any of the rich texture of human perception [<a href="#ref1" style="color:#2b5e5e;">1</a>].</li>
+                
+                <li><strong>The dimensions are independent, so the snail's profile could be mixed:</strong> Snails might be entity-conscious (they have some experience) but state-sparse (only conscious occasionally), modally sparse (only one modality at a time), width-narrow, and property-sparse. Or any combination. We have no way to decide [<a href="#ref1" style="color:#2b5e5e;">1</a>].</li>
+                
+                <li><strong>Lessons for methodology:</strong> The five dimensions show that asking simply "is the snail conscious?" is too crude. The real questions are: In what way? How much? How often? With what richness? The snail forces us to refine our questions [<a href="#ref1" style="color:#2b5e5e;">1</a>].</li>
+                
+                <li><strong>The "thread that unravels the sweater":</strong> The garden snail is not a minor puzzle; it exposes that our assumptions about sparseness/abundance on every dimension are just assumptions. We are in a "horrible epistemic position" regarding the distribution of consciousness [<a href="#ref1" style="color:#2b5e5e;">1</a>].</li>
+            </ul>
+        </div>
+
+        <!-- Direct quote on the epistemic situation -->
+        <div class="quote-block">
+            "Contemplate the garden snail with sufficient care and you will discover, I think, that we human beings, in our current scientific condition, have little ground for making confident assertions about one of the most general and foundational questions of the science of consciousness: How widespread is consciousness in the universe?" [<a href="#ref1" style="color:#2b5e5e;">1</a>]
+        </div>
+
+        <!-- Conclusion: applying the taxonomy to snails -->
+        <div class="section-title">🧩 The snail's place in the five dimensions</div>
+        
+        <div style="background:#f3efe9; border-radius:28px; padding:1.5rem; margin:2rem 0;">
+            <table style="width:100%; border-collapse:collapse;">
+                <tr style="border-bottom:2px dotted #b2956e;">
+                    <th style="text-align:left; padding:0.5rem;">Dimension</th>
+                    <th style="text-align:left; padding:0.5rem;">Sparse possibility</th>
+                    <th style="text-align:left; padding:0.5rem;">Abundant possibility</th>
+                    <th style="text-align:left; padding:0.5rem;">Snail dilemma</th>
+                </tr>
+                <tr style="border-bottom:1px solid #cfbcac;">
+                    <td style="padding:0.5rem;"><strong>Entity</strong></td>
+                    <td style="padding:0.5rem;">Snails not conscious</td>
+                    <td style="padding:0.5rem;">Snails conscious</td>
+                    <td style="padding:0.5rem;">No decisive evidence</td>
+                </tr>
+                <tr style="border-bottom:1px solid #cfbcac;">
+                    <td style="padding:0.5rem;"><strong>State</strong></td>
+                    <td style="padding:0.5rem;">Conscious only when active</td>
+                    <td style="padding:0.5rem;">Conscious even at rest</td>
+                    <td style="padding:0.5rem;">Do snails have dreamless sleep?</td>
+                </tr>
+                <tr style="border-bottom:1px solid #cfbcac;">
+                    <td style="padding:0.5rem;"><strong>Modal</strong></td>
+                    <td style="padding:0.5rem;">Only one modality at a time</td>
+                    <td style="padding:0.5rem;">Multiple modalities (touch, smell, etc.)</td>
+                    <td style="padding:0.5rem;">Unknown integration</td>
+                </tr>
+                <tr style="border-bottom:1px solid #cfbcac;">
+                    <td style="padding:0.5rem;"><strong>Width</strong></td>
+                    <td style="padding:0.5rem;">Narrow, just a point</td>
+                    <td style="padding:0.5rem;">Broad sensory field</td>
+                    <td style="padding:0.5rem;">How much of environment?</td>
+                </tr>
+                <tr>
+                    <td style="padding:0.5rem;"><strong>Property</strong></td>
+                    <td style="padding:0.5rem;">Only simple valence</td>
+                    <td style="padding:0.5rem;">Rich property types</td>
+                    <td style="padding:0.5rem;">Utterly speculative</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- References -->
+        <div style="margin: 2.5rem 0 1rem; border-top: 2px solid #cfc3b4; padding-top: 1.5rem;">
+            <h4 style="font-size:1.2rem; color:#2b5e5e;">Reference</h4>
+            <p id="ref1" class="bibref">[1] Schwitzgebel, E. (2020). "Is There Something It’s Like to Be a Garden Snail?" December 23, 2020 version. Department of Philosophy, UC Riverside. <a href="#" style="color:#2b5e5e;">https://www.faculty.ucr.edu/~eschwitz/SchwitzPapers/Snails-201223.htm</a> [Section: "Five Dimensions of Sparseness or Abundance"]</p>
+        </div>
+
+        <!-- navigation back -->
+        <div class="nav-back">
+            <a href="index.html" class="back-link">
+                <span style="font-size:1.5rem;">←</span> back to all nine questions
+            </a>
+            <span style="font-size:0.95rem; color:#5c6f6b;">Schwitzgebel · 5 dimensions · snail lessons</span>
+        </div>
+
+        <div class="footer-note">
+            <p>📖 five dimensions of sparseness/abundance · directly from Schwitzgebel's 2020 manuscript · midterm spring 2026</p>
+        </div>
+    </div>
+</body>
+</html>
