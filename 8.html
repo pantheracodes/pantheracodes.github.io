@@ -7,7 +7,7 @@
     <meta content="https://hills.ccsf.edu/~ragui124/theAllegoryOfTheBicameralMind.jpg" property="og:image">
     <link rel="icon" type="image/jpg" href="https://hills.ccsf.edu/~ragui124/theAllegoryOfTheBicameralMind.jpg">
     <link rel="stylesheet" href="styles.css">
-    <title>Panpsychism · ethics of eating plants</title>
+    <title>Roelofs & Buchanan · ethics of eating plants (IUS + asymmetry)</title>
     <style>
         * {
             margin: 0;
@@ -65,7 +65,7 @@
             font-size: 1.8rem;
             font-weight: 400;
             color: #1f5a4c;
-            margin: 2rem 0 1rem;
+            margin: 2.5rem 0 1rem;
             border-bottom: 2px dotted #b2956e;
             padding-bottom: 0.3rem;
         }
@@ -79,69 +79,57 @@
             color: #2d5a4f;
             font-size: 1.1rem;
         }
-        .two-views {
-            display: flex;
-            gap: 2rem;
-            margin: 2rem 0;
-            flex-wrap: wrap;
-        }
-        .view-card {
-            flex: 1 1 300px;
-            background: #f3efe9;
+        .ius-box {
+            background: #dde8e0;
             border-radius: 32px;
             padding: 1.8rem;
-            border: 1px solid #cfbcac;
-            box-shadow: 0 8px 0 #b3a084;
-        }
-        .view-card.against {
-            border-top: 8px solid #b58b7a;
-        }
-        .view-card.for {
-            border-top: 8px solid #7f9c8a;
-        }
-        .view-card h3 {
-            font-size: 1.8rem;
-            font-weight: 400;
-            color: #2b5e5e;
-            margin-bottom: 1rem;
-        }
-        .view-card h4 {
-            font-size: 1.3rem;
-            font-weight: 400;
-            color: #4d6a5a;
-            margin: 1.2rem 0 0.8rem;
-        }
-        .insight-list {
-            list-style: none;
-            margin: 1.5rem 0;
-        }
-        .insight-list li {
-            font-size: 1.15rem;
-            margin-bottom: 1rem;
-            padding-left: 2.2rem;
-            position: relative;
-        }
-        .insight-list li::before {
-            content: "🌱";
-            position: absolute;
-            left: 0;
-            color: #6b4f3a;
-            font-size: 1.3rem;
-        }
-        .argument-box {
-            background: #fffaf2;
-            border-radius: 24px;
-            padding: 1.2rem;
-            margin: 1rem 0;
-            border: 1px solid #dacbb8;
-        }
-        .moral-continuum {
-            background: #e6dcd0;
-            border-radius: 28px;
-            padding: 1.8rem;
             margin: 2rem 0;
-            border: 2px solid #baa385;
-            text-align: center;
+            border: 2px solid #5f8b7a;
+        }
+        .principle-grid {
+            display: flex;
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+            flex-wrap: wrap;
+        }
+        .principle-card {
+            flex: 1 1 250px;
+            background: #f3efe9;
+            border-radius: 28px;
+            padding: 1.5rem;
+            border: 1px solid #cfbcac;
+        }
+        .principle-card h4 {
+            font-size: 1.4rem;
+            color: #2b5e5e;
+            margin-bottom: 0.5rem;
+            border-bottom: 1px dotted #b2956e;
+        }
+        .asymmetry-note {
+            background: #f0e5d8;
+            border-radius: 28px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-left: 8px solid #b58b7a;
+        }
+        .option-card {
+            background: #fffaf2;
+            border-radius: 28px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border: 1px solid #9bb8a8;
+            box-shadow: 0 5px 0 #7f9c8a;
+        }
+        .option-card h4 {
+            font-size: 1.4rem;
+            color: #2b5e5e;
+            margin-bottom: 0.8rem;
+        }
+        .page-ref {
+            font-size: 0.9rem;
+            color: #5f6f7d;
+            margin-top: 0.5rem;
+            text-align: right;
         }
         .nav-back {
             margin-top: 3rem;
@@ -160,9 +148,6 @@
             font-weight: 600;
             border: 1px solid #b59d79;
             transition: 0.15s;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.6rem;
         }
         .back-link:hover {
             background: #e4dacd;
@@ -192,155 +177,115 @@
     <div class="container">
         <!-- header -->
         <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.2rem;">
-            <span style="font-size: 2.5rem;">⚖️</span>
-            <span class="paper-ref">panpsychism · environmental ethics · plant consciousness</span>
+            <span style="font-size: 2.5rem;">🌱</span>
+            <span class="paper-ref">Roelofs & Buchanan · Philosophical Studies (2019) 176:2991–3017</span>
         </div>
         <h1>Ethical implications of panpsychism</h1>
-        <div class="sub">why think it implies it's unethical / not unethical to eat plants</div>
+        <div class="sub">why it neither undermines nor demands veganism · IUS + asymmetry principle</div>
 
-        <!-- introduction -->
-        <p style="font-size:1.2rem; margin-bottom:1.5rem;">Panpsychism—the view that consciousness is fundamental and pervasive in nature—raises profound ethical questions [<a href="#ref1" style="color:#2b5e5e;">1</a>]. If everything from electrons to ecosystems has some form of inner experience, does that mean we must extend moral consideration to <em>everything</em>? And if so, does that make eating plants morally problematic? Philosophers have explored both sides of this dilemma [<a href="#ref2" style="color:#2b5e5e;">2</a>][<a href="#ref3" style="color:#2b5e5e;">3</a>].</p>
+        <!-- introduction: the core dilemma from the paper -->
+        <div class="quote-block">
+            <p>“If plants are conscious, doesn’t the principle of respect for conscious beings demand avoiding harm to them just as much as to animals?” — Roelofs & Buchanan (2019, p. 3012)</p>
+        </div>
+
+        <p style="font-size:1.2rem;">This page presents the argument of Roelofs and Buchanan (2019) on the ethical implications of panpsychism for eating plants, drawing exclusively from Sections 7 and 8 of their paper. The authors defend a nuanced position: panpsychism does not force us to become plant‐vegans, nor does it make veganism irrational. The key lies in their <strong>Invisibility of Unfamiliar States (IUS)</strong> thesis and the resulting <strong>Asymmetry Principle</strong>.</p>
+
+        <!-- Section 1: IUS and Epistemic Atomism (from paper, p. 3010–3011) -->
+        <div class="section-title">🧠 1. The epistemology of other minds: IUS</div>
+
+        <div class="ius-box">
+            <h3 style="color:#2b5e5e;">Invisibility of Unfamiliar States (IUS)</h3>
+            <p style="font-size:1.15rem; margin:1rem 0;">“Our intuitions about consciousness in other beings are sensitive only to conscious states of types we are personally familiar with.” (p. 3009)</p>
+            <p>If a being has experiences completely alien to ours—no pain, no desire, no perception as we know it—those experiences will be <strong>invisible</strong> to our intuitive mindreading faculties. We will get no intuitive “hit” that anything is going on inside them.</p>
+            <p class="page-ref" style="margin-top:1rem;">— IUS introduced p. 3009, elaborated p. 3010–3011</p>
+        </div>
+
+        <div class="principle-grid">
+            <div class="principle-card">
+                <h4>Epistemic Atomism (EA)</h4>
+                <p>“Our intuitions about consciousness in other beings arise primarily from detecting particular experiences, and only on that basis inferring the presence or absence of consciousness per se.” (p. 3011)</p>
+                <p class="page-ref">p. 3011</p>
+            </div>
+            <div class="principle-card">
+                <h4>Alien beings</h4>
+                <p>Creatures all of whose experiences are “alien” (maximally unfamiliar) will not register as conscious at all, because we detect no particular familiar states. (p. 3010)</p>
+            </div>
+        </div>
+
+        <!-- Section 2: The Asymmetry Principle (p. 3011) -->
+        <div class="section-title">⚖️ 2. The Asymmetry Principle</div>
+
+        <div class="asymmetry-note">
+            <p style="font-size:1.2rem;">From IUS + EA, the authors derive a crucial epistemological asymmetry:</p>
+            <p style="font-size:1.3rem; font-weight:500; margin:1rem 0;">“Our ‘positive’ intuitions (that something is definitely or probably conscious) are generally reliable, but our ‘negative’ intuitions (that something is definitely or probably not conscious) are generally unreliable.” (p. 3009)</p>
+            <p><strong>Why?</strong> A negative intuition could mean either (a) the being is genuinely non‑conscious, or (b) the being has <em>alien</em> consciousness that our faculties cannot detect. Since we have no way to distinguish these cases, negative intuitions carry little weight. Positive intuitions, by contrast, require detecting a <em>familiar</em> state—and that detection is trustworthy. (p. 3011)</p>
+            <p class="page-ref">Asymmetry Principle stated p. 3009, defended p. 3011</p>
+        </div>
+
+        <!-- Section 3: Application to plants and animals (p. 3012) -->
+        <div class="section-title">🌿 3. What this means for plants and animals</div>
 
         <div class="quote-block">
-            "The history of philosophy is a history of moral circle expansion. This history correlates with a history of expansionism about consciousness... to invertebrates, to plants, to logic gates, and to fundamental entities." [<a href="#ref1" style="color:#2b5e5e;">1</a>]
+            <p>“If a being is undergoing pain, pleasure, fear, or striving, the fact that it has those states is something that our intuitive mindreading capacities should, with enough effort, detect. To the extent that intuition judges a given being completely unconscious, that is evidence that, even if it is in fact conscious, it does not undergo anything recognizable as suffering, seeking, or other morally significant states.” (p. 3012)</p>
         </div>
 
-        <!-- the two opposing implications -->
-        <div class="section-title">🌿 Two paths from panpsychism to dietary ethics</div>
+        <p style="font-size:1.15rem;">Thus:</p>
+        <ul style="margin:1rem 0 1.5rem 2rem; font-size:1.15rem;">
+            <li><strong>Animals:</strong> We have strong positive intuitions of familiar states (pain, fear, pleasure). These are reliable. So we have good evidence that animals experience morally significant states.</li>
+            <li><strong>Plants:</strong> We have no positive intuitions of familiar states. Their consciousness (if any) is likely alien. We have no evidence that they undergo suffering or anything morally significant—only the absence of evidence, which IUS explains away.</li>
+        </ul>
 
-        <div class="two-views">
-            <!-- view 1: unethical to eat plants -->
-            <div class="view-card against">
-                <h3>🥕 Why panpsychism <em>does</em> imply it's unethical to eat plants</h3>
-                
-                <div class="argument-box">
-                    <h4 style="margin-top:0;">1. Universal moral considerability</h4>
-                    <p>If consciousness is the basis for moral status (as many ethicists hold), and panpsychism entails that plants have some form of consciousness, then plants deserve moral consideration. Harming them—by cutting, boiling, or eating them—would be morally significant [<a href="#ref2" style="color:#2b5e5e;">2</a>][<a href="#ref4" style="color:#2b5e5e;">4</a>].</p>
-                </div>
+        <!-- Section 4: Three ethical options (directly from paper, p. 3013–3014) -->
+        <div class="section-title">🥗 4. Three options for the panpsychist</div>
 
-                <div class="argument-box">
-                    <h4 style="margin-top:0;">2. The vegetarian's dilemma (tu quoque)</h4>
-                    <p>As biologist Karl Niklas puts it: "How can you be a vegetarian? If you are a vegetarian, you're mass-killing broccoli! In every seed, there's a little embryonic plant. One slice of bread has killed 1000 little baby plants." [<a href="#ref5" style="color:#2b5e5e;">5</a>] This challenges the consistency of vegans who object to animal suffering but ignore plant suffering [<a href="#ref2" style="color:#2b5e5e;">2</a>].</p>
-                </div>
+        <p>The authors explicitly state that panpsychists have three coherent ethical options regarding plant consumption. They take no stand on which is best, but all are “already live options, already familiar positions in moral debate.” (p. 3014)</p>
 
-                <div class="argument-box">
-                    <h4 style="margin-top:0;">3. Intentionality and moral status</h4>
-                    <p>Weak panpsychism often attributes mindlike qualities—including intentionality and teleology—to plants. If intentionality (goal-directed behavior) is sufficient for moral status, then plants qualify. Andrews (1998) notes that this criterion would also give machines moral status, which some see as a <em>reductio</em> [<a href="#ref3" style="color:#2b5e5e;">3</a>][<a href="#ref6" style="color:#2b5e5e;">6</a>].</p>
-                </div>
-
-                <div class="argument-box">
-                    <h4 style="margin-top:0;">4. Rejecting moral hierarchy</h4>
-                    <p>Val Plumwood's ecofeminist panpsychism advocates "the rejection of moral hierarchy and the inclusion of plants, mountains, rivers and ecosystems within the moral community." [<a href="#ref6" style="color:#2b5e5e;">6</a>] On this strong view, plants have intrinsic value and should not be treated as mere resources [<a href="#ref3" style="color:#2b5e5e;">3</a>].</p>
-                </div>
-            </div>
-
-            <!-- view 2: not unethical to eat plants -->
-            <div class="view-card for">
-                <h3>🥗 Why panpsychism <em>does not</em> imply it's unethical to eat plants</h3>
-
-                <div class="argument-box">
-                    <h4 style="margin-top:0;">1. Degrees of consciousness matter</h4>
-                    <p>Even if plants have some form of experience, it's almost certainly <em>vastly simpler</em> than animal sentience. As one philosopher puts it: "There is a morally relevant distinction between a rock that (hypothetically) has a flicker of proto-consciousness and a pig screaming in agony... Degrees of sentience would matter." [<a href="#ref2" style="color:#2b5e5e;">2</a>]</p>
-                </div>
-
-                <div class="argument-box">
-                    <h4 style="margin-top:0;">2. Sentience, not mere consciousness, is the moral threshold</h4>
-                    <p>Many ethicists distinguish between <em>consciousness</em> (any experience) and <em>sentience</em> (the capacity for pleasure, pain, and suffering). Plants might have the former but not the latter. As Truth Seeker argues: "Sentience, not mere aliveness, is what makes the moral difference... There is no credible evidence that they have subjective experiences." [<a href="#ref2" style="color:#2b5e5e;">2</a>]</p>
-                </div>
-
-                <div class="argument-box">
-                    <h4 style="margin-top:0;">3. Intentionality doesn't entail moral status</h4>
-                    <p>Andrews challenges the assumption that intentionality is sufficient for moral considerability. He argues that "any account of intentionality that allows it to be predicated of mountains, rivers etc. would be widely, and correctly regarded as a reduction of that account." [<a href="#ref3" style="color:#2b5e5e;">3</a>][<a href="#ref6" style="color:#2b5e5e;">6</a>] Moral status may require additional capacities like agency or sentence.</p>
-                </div>
-
-                <div class="argument-box">
-                    <h4 style="margin-top:0;">4. Pragmatic necessity and the least-harm principle</h4>
-                    <p>Even if plants have some moral status, we cannot avoid causing <em>some</em> harm to live. The ethical task is to minimize harm. Since plant-based diets cause <em>far less</em> harm than animal-based diets (fewer plants are consumed indirectly via animal feed), veganism remains ethically optimal even under panpsychism [<a href="#ref2" style="color:#2b5e5e;">2</a>].</p>
-                </div>
-
-                <div class="argument-box">
-                    <h4 style="margin-top:0;">5. Plant consciousness, if it exists, is radically unlike ours</h4>
-                    <p>Philosopher David Chalmers notes: "It's not as if the elementary particles are sitting there thinking thoughts or even feeling pain... it might have some primitive analogue." [<a href="#ref5" style="color:#2b5e5e;">5</a>] Such primitive experience may not ground the kind of interests that generate strong moral claims.</p>
-                </div>
-            </div>
+        <div class="option-card">
+            <h4>🌱 Option 1: Deny moral relevance</h4>
+            <p>“They might just say ‘no’: consciousness that is not organized around the pursuit of goals, or the perception of some things as pleasant and others as unpleasant, is morally neutral to destroy, disrupt, or otherwise interfere with.” (p. 3013)</p>
+            <p class="page-ref">p. 3013</p>
         </div>
 
-        <!-- the deeper theoretical framing -->
-        <div class="section-title">🧩 The core philosophical debate</div>
-
-        <p>Gottlieb and Fischer (2024) frame the issue in terms of the <strong>"expansion of the moral circle"</strong> [<a href="#ref1" style="color:#2b5e5e;">1</a>]. As our conception of consciousness expands—from humans to animals, to invertebrates, to plants, to fundamental particles—our moral framework must adapt. But <em>how</em> it adapts is contested:</p>
-
-        <div style="display:flex; gap:1.5rem; margin:1.5rem 0; flex-wrap:wrap;">
-            <div style="flex:1; background:#f3efe9; border-radius:28px; padding:1.2rem;">
-                <h4 style="color:#2b5e5e;">📈 Expansionist view</h4>
-                <p>If consciousness is the basis for moral status, then as we discover consciousness in more entities, we must expand our moral circle accordingly. This could lead to a form of <strong>biospherical egalitarianism</strong> where all living things have equal moral worth [<a href="#ref3" style="color:#2b5e5e;">3</a>].</p>
-            </div>
-            <div style="flex:1; background:#f3efe9; border-radius:28px; padding:1.2rem;">
-                <h4 style="color:#2b5e5e;">📉 Hierarchical view</h4>
-                <p>Even if consciousness is pervasive, it comes in <strong>vastly different degrees and kinds</strong>. Moral status tracks the richness of conscious experience—the capacity for suffering, for self-awareness, for temporal integration. Plants may have minimal consciousness and thus minimal moral status [<a href="#ref2" style="color:#2b5e5e;">2</a>][<a href="#ref4" style="color:#2b5e5e;">4</a>].</p>
-            </div>
+        <div class="option-card">
+            <h4>🔄 Option 2: Death as transformation</h4>
+            <p>“In a panpsychist world, all that can happen is a change in the form of consciousness… What would normally be regarded as a destruction of consciousness (e.g. the death of an animal), is to a panpsychist a transformation from one form of consciousness to another. The practical implications of this option, far from constraining our actions more tightly, actually free us from the thought that biological death is intrinsically an evil.” (p. 3013)</p>
+            <p class="page-ref">p. 3013</p>
         </div>
 
-        <div class="moral-continuum">
-            <h3 style="color:#2b5e5e; margin-bottom:0.5rem;">⚖️ The spectrum solution</h3>
-            <p style="font-size:1.15rem;">Many philosophers converge on a <strong>graded approach</strong>: panpsychism implies that everything has <em>some</em> moral standing, but standing varies with the richness of conscious experience. This avoids both the absurdity of treating rocks as morally equal to humans, and the anthropocentrism of denying any moral consideration to non-humans [<a href="#ref1" style="color:#2b5e5e;">1</a>][<a href="#ref2" style="color:#2b5e5e;">2</a>][<a href="#ref4" style="color:#2b5e5e;">4</a>].</p>
+        <div class="option-card">
+            <h4>⚖️ Option 3: All conscious beings have status, but animals’ needs outweigh</h4>
+            <p>“They might say that it is morally better not to kill a plant than to kill one, but that animals’ need to sustain their richer sort of life justifies killing plants for food. The main practical implication of this option would be that large complexes of plant life, and other natural phenomena, have their own intrinsic moral value—a view already countenanced by some environmentalists.” (p. 3013–3014)</p>
+            <p class="page-ref">p. 3013–3014</p>
         </div>
 
-        <!-- summary table-like comparison -->
-        <div style="background:#f3efe9; border-radius:28px; padding:1.5rem; margin:2rem 0;">
-            <h3 style="color:#2b5e5e;">📋 Summary: the two arguments</h3>
-            <table style="width:100%; border-collapse:collapse; margin-top:1rem;">
-                <tr style="border-bottom:2px dotted #b2956e;">
-                    <th style="text-align:left; padding:0.5rem;">Position</th>
-                    <th style="text-align:left; padding:0.5rem;">Core reasoning</th>
-                    <th style="text-align:left; padding:0.5rem;">Key proponents/objections</th>
-                </tr>
-                <tr style="border-bottom:1px solid #cfbcac;">
-                    <td style="padding:0.5rem;"><strong>Unethical to eat plants</strong></td>
-                    <td style="padding:0.5rem;">Plants have consciousness → moral status → harming them is wrong. Vegans are inconsistent.</td>
-                    <td style="padding:0.5rem;">Tu quoque argument; Plumwood's ecofeminism; Niklas's challenge [<a href="#ref3" style="color:#2b5e5e;">3</a>][<a href="#ref5" style="color:#2b5e5e;">5</a>]</td>
-                </tr>
-                <tr>
-                    <td style="padding:0.5rem;"><strong>Not unethical to eat plants</strong></td>
-                    <td style="padding:0.5rem;">Degrees of sentience matter; plants lack suffering; minimal harm; intentionality ≠ moral status.</td>
-                    <td style="padding:0.5rem;">Andrews (1998); Truth Seeker; Chalmers on primitive consciousness [<a href="#ref2" style="color:#2b5e5e;">2</a>][<a href="#ref3" style="color:#2b5e5e;">3</a>][<a href="#ref5" style="color:#2b5e5e;">5</a>]</td>
-                </tr>
-            </table>
+        <!-- Section 5: The authors' neutral conclusion -->
+        <div class="section-title">📌 5. Conclusion: panpsychism doesn’t settle the question</div>
+
+        <div class="quote-block">
+            <p>“The authors take no stand on which of these three options is best: rather, they point out that all three are already live options, already familiar positions in moral debate. Panpsychism can influence how we think about these questions, but by itself it neither answers them nor renders them pointless.” (p. 3014)</p>
         </div>
 
-        <!-- conclusion -->
-        <div class="section-title">🎯 Conclusion</div>
-        <p>Panpsychism does not <em>settle</em> the ethics of eating plants—it <em>sharpens</em> the question. It forces us to ask: what kind of consciousness grounds moral status? Is it all consciousness, or only certain forms (sentience, self-awareness, capacity for suffering)? And if consciousness is graded, how do we weigh different degrees of experience? These remain open philosophical questions [<a href="#ref1" style="color:#2b5e5e;">1</a>][<a href="#ref4" style="color:#2b5e5e;">4</a>].</p>
+        <p style="font-size:1.15rem;">The IUS framework shows that veganism remains rationally defensible even if panpsychism is true: we have reliable positive evidence for animal suffering, and no comparable evidence for plant suffering. Panpsychism adds the possibility that plants have alien consciousness, but that possibility does not generate new moral obligations because we cannot detect any morally relevant familiar states in them.</p>
 
-        <hr>
-
-        <!-- references -->
+        <!-- references (only this paper) -->
         <div style="margin: 2.5rem 0 1rem; border-top: 2px solid #cfc3b4; padding-top: 1.5rem;">
-            <h4 style="font-size:1.2rem; color:#2b5e5e;">References</h4>
-            <p id="ref1" class="bibref">[1] Gottlieb, J., & Fischer, B. (2024). The Ethical Implications of Panpsychism. <em>Australasian Journal of Philosophy</em>, 102(4), 1030–1044. <a href="https://www.tandfonline.com/doi/full/10.1080/00048402.2024.2350708" style="color:#2b5e5e;">doi:10.1080/00048402.2024.2350708</a></p>
-            <p id="ref2" class="bibref">[2] Truth Seeker & Corvus (2025). "What is right and what is wrong and how do we know?" The Philosophy Forum. [Discussion of panpsychism and plant ethics] <a href="https://archive.thephilosophyforum.com/discussions/16150-what-is-right-and-what-is-wrong-and-how-do-we-know.html" style="color:#2b5e5e;">thephilosophyforum.com</a></p>
-            <p id="ref3" class="bibref">[3] Andrews, J. (1998). Weak Panpsychism and Environmental Ethics. <em>Environmental Values</em>, 7(4), 381–396. <a href="https://journals.sagepub.com/doi/abs/10.3197/096327198129341636" style="color:#2b5e5e;">doi:10.3197/096327198129341636</a></p>
-            <p id="ref4" class="bibref">[4] Roelofs, L., & Buchanan, J. (2018). <a
-            href="https://www.jstor.org/stable/45211674?seq=1" style="color:#2b5e5e;">Panpsychism, intuitions, and the great chain of being.
-            <em>Philosophical Studies</em>, 176, 2991–3017.</a></p>
-            <p id="ref5" class="bibref">[5] Moens, J. (2020). Are atoms, bacteria and plants conscious? Scienceline. [Interview with Karl Niklas and David Chalmers] <a href="https://scienceline.org/2020/08/are-atoms-bacteria-and-plants-conscious/" style="color:#2b5e5e;">scienceline.org</a></p>
-            <p id="ref6" class="bibref">[6] Plumwood, V. (1998). <a
-            href="https://www.environmentandsociety.org/sites/default/files/key_docs/ev_7no.4_plumwood_val.pdf"
-            style="color:#2b5e5e;"> Intentional Recognition and Reductive Rationality: A Response to John Andrews.
-            <em>Environmental Values</em>, 7(4).
-            </a></p>
+            <h4 style="font-size:1.2rem; color:#2b5e5e;">Reference</h4>
+            <p class="bibref">
+            <a href="https://www.jstor.org/stable/45211674?seq=5" style=color:#2b5e5e;">
+            Roelofs, L., & Buchanan, J. (2019). Panpsychism, intuitions, and the great chain of being. <em>Philosophical Studies</em>
+            </a>
+            </p>
+            <p class="bibref">All quotations and arguments on this page are drawn exclusively from Sections 7 (pp. 3009–3012) and 8 (pp. 3012–3014) of this paper.</p>
         </div>
 
         <!-- navigation back -->
         <div class="nav-back">
-            <a href="index.html" class="back-link">
-                <span style="font-size:1.5rem;">←</span> back to all nine questions
-            </a>
-            <span style="font-size:0.95rem; color:#5c6f6b;">panpsychism · ethics · plants</span>
+            <a href="index.html" class="back-link">← back to all nine questions</a>
+            <span style="font-size:0.95rem; color:#5c6f6b;">IUS · asymmetry · three options</span>
         </div>
 
         <div class="footer-note">
-            <p>📖 ethical implications of panpsychism · both sides of the plant dilemma · midterm spring 2026</p>
+            <p>📖 based solely on Roelofs & Buchanan (2019) · spring 2026</p>
         </div>
     </div>
 </body>
